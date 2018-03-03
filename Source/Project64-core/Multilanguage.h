@@ -106,6 +106,13 @@ enum LanguageStringID
     MENU_ABOUT_PJ64 = 182,
     MENU_FORUM = 183,
     MENU_HOMEPAGE = 184,
+    
+    //Netplay Menu
+    MENU_NETPLAY = 4000,
+    MENU_REPLACESAVES = 4001,
+    MENU_MPN = 4002,
+    MENU_UPDATE_CODES = 4003,
+    MENU_UPDATE_SAVES = 4004,
 
     //Current Save Slot menu
     MENU_SLOT_DEFAULT = 190,

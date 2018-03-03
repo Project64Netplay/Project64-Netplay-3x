@@ -524,6 +524,10 @@ bool CMainMenu::ProcessMessage(HWND hWnd, DWORD /*FromAccelerator*/, DWORD MenuI
     case ID_HELP_HOMEPAGE: ShellExecute(NULL, "open", "http://www.pj64-emu.com", NULL, NULL, SW_SHOWMAXIMIZED); break;
     case ID_HELP_ABOUT: m_Gui->AboutBox(); break;
     case ID_HELP_ABOUTSETTINGFILES: m_Gui->AboutIniBox(); break;
+    case ID_NETPLAY_REPLACESAVES: ShellExecute(NULL, "open", "Replace.bat", NULL, NULL, SW_SHOWMAXIMIZED); break;
+    case ID_NETPLAY_MPN: ShellExecute(NULL, "open", "https://discord.gg/0qi7VWGokA2Ffr4q", NULL, NULL, SW_SHOWMAXIMIZED); break;
+    case ID_NETPLAY_UPDATE_CODES: ShellExecute(NULL, "open", "UpdateCodes.bat", NULL, NULL, SW_SHOWMINIMIZED); break;
+    case ID_NETPLAY_UPDATE_SAVES: ShellExecute(NULL, "open", "UpdateSaves.bat", NULL, NULL, SW_SHOWMINIMIZED); break;
     default:
         if (MenuID >= ID_RECENT_ROM_START && MenuID < ID_RECENT_ROM_END)
         {
@@ -1213,6 +1217,18 @@ void CMainMenu::FillOutMenu(HMENU hMenu)
         HelpMenu.push_back(MENU_ITEM(ID_HELP_ABOUTSETTINGFILES, MENU_ABOUT_INI));
     }
     HelpMenu.push_back(MENU_ITEM(ID_HELP_ABOUT, MENU_ABOUT_PJ64));
+    
+    /* Netplay Menu
+    ****************/
+    MenuItemList NetplayMenu;
+
+    NetplayMenu.push_back(MENU_ITEM(ID_NETPLAY_MPN, MENU_MPN));
+    NetplayMenu.push_back(MENU_ITEM(SPLITER));
+    NetplayMenu.push_back(MENU_ITEM(ID_NETPLAY_REPLACESAVES, MENU_REPLACESAVES));
+    NetplayMenu.push_back(MENU_ITEM(ID_SYSTEM_CHEAT, MENU_CHEAT, m_ShortCuts.ShortCutString(ID_SYSTEM_CHEAT, AccessLevel)));
+    NetplayMenu.push_back(MENU_ITEM(SPLITER));
+    NetplayMenu.push_back(MENU_ITEM(ID_NETPLAY_UPDATE_CODES, MENU_UPDATE_CODES));
+    NetplayMenu.push_back(MENU_ITEM(ID_NETPLAY_UPDATE_SAVES, MENU_UPDATE_SAVES));
 
     /* Main Title bar Menu
     ***********************/
@@ -1239,6 +1255,9 @@ void CMainMenu::FillOutMenu(HMENU hMenu)
         }
     }
     Item.Reset(SUB_MENU, MENU_HELP, EMPTY_STDSTR, &HelpMenu);
+    if (RomLoading) { Item.SetItemEnabled(false); }
+    MainTitleMenu.push_back(Item);
+    Item.Reset(SUB_MENU, MENU_NETPLAY, EMPTY_STDSTR, &NetplayMenu);
     if (RomLoading) { Item.SetItemEnabled(false); }
     MainTitleMenu.push_back(Item);
 

@@ -1,6 +1,6 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2010 or later
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3rd Party", "3rd Party", "{AA8F7F8E-5377-4911-859D-8A8817B0DB26}"
 EndProject
@@ -129,7 +129,6 @@ Global
 		{360A34F3-3172-4B09-8BC9-B3FBEE677863}.Debug|Win32.ActiveCfg = Release|Win32
 		{360A34F3-3172-4B09-8BC9-B3FBEE677863}.Debug|x64.ActiveCfg = Release|Win32
 		{360A34F3-3172-4B09-8BC9-B3FBEE677863}.Release|Win32.ActiveCfg = Release|Win32
-		{360A34F3-3172-4B09-8BC9-B3FBEE677863}.Release|Win32.Build.0 = Release|Win32
 		{360A34F3-3172-4B09-8BC9-B3FBEE677863}.Release|x64.ActiveCfg = Release|Win32
 		{A4D13408-A794-4199-8FC7-4A9A32505005}.Debug|Win32.ActiveCfg = Debug|Win32
 		{A4D13408-A794-4199-8FC7-4A9A32505005}.Debug|Win32.Build.0 = Debug|Win32
