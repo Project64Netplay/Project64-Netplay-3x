@@ -31,10 +31,21 @@
   </ImportGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="3rdParty\7zip.cpp">
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="3rdParty\connection_win.cpp" />
+    <ClCompile Include="3rdParty\discord-rpc.cpp" />
+    <ClCompile Include="3rdParty\discord_register_win.cpp" />
+    <ClCompile Include="3rdParty\dllmain.cpp" />
+    <ClCompile Include="3rdParty\rpc_connection.cpp" />
+    <ClCompile Include="3rdParty\serialization.cpp" />
     <ClCompile Include="AppInit.cpp" />
     <ClCompile Include="Logging.cpp" />
     <ClCompile Include="MemoryExceptionFilter.cpp" />
@@ -126,6 +137,50 @@
     <ClInclude Include="..\3rdParty\zlib\zconf.h" />
     <ClInclude Include="..\3rdParty\zlib\zlib.h" />
     <ClInclude Include="3rdParty\7zip.h" />
+    <ClInclude Include="3rdParty\backoff.h" />
+    <ClInclude Include="3rdParty\connection.h" />
+    <ClInclude Include="3rdParty\discord-rpc.h" />
+    <ClInclude Include="3rdParty\discord_register.h" />
+    <ClInclude Include="3rdParty\mario_party_netplay.h" />
+    <ClInclude Include="3rdParty\msg_queue.h" />
+    <ClInclude Include="3rdParty\rapidjson\allocators.h" />
+    <ClInclude Include="3rdParty\rapidjson\cursorstreamwrapper.h" />
+    <ClInclude Include="3rdParty\rapidjson\document.h" />
+    <ClInclude Include="3rdParty\rapidjson\encodedstream.h" />
+    <ClInclude Include="3rdParty\rapidjson\encodings.h" />
+    <ClInclude Include="3rdParty\rapidjson\error\en.h" />
+    <ClInclude Include="3rdParty\rapidjson\error\error.h" />
+    <ClInclude Include="3rdParty\rapidjson\filereadstream.h" />
+    <ClInclude Include="3rdParty\rapidjson\filewritestream.h" />
+    <ClInclude Include="3rdParty\rapidjson\fwd.h" />
+    <ClInclude Include="3rdParty\rapidjson\internal\biginteger.h" />
+    <ClInclude Include="3rdParty\rapidjson\internal\diyfp.h" />
+    <ClInclude Include="3rdParty\rapidjson\internal\dtoa.h" />
+    <ClInclude Include="3rdParty\rapidjson\internal\ieee754.h" />
+    <ClInclude Include="3rdParty\rapidjson\internal\itoa.h" />
+    <ClInclude Include="3rdParty\rapidjson\internal\meta.h" />
+    <ClInclude Include="3rdParty\rapidjson\internal\pow10.h" />
+    <ClInclude Include="3rdParty\rapidjson\internal\regex.h" />
+    <ClInclude Include="3rdParty\rapidjson\internal\stack.h" />
+    <ClInclude Include="3rdParty\rapidjson\internal\strfunc.h" />
+    <ClInclude Include="3rdParty\rapidjson\internal\strtod.h" />
+    <ClInclude Include="3rdParty\rapidjson\internal\swap.h" />
+    <ClInclude Include="3rdParty\rapidjson\istreamwrapper.h" />
+    <ClInclude Include="3rdParty\rapidjson\memorybuffer.h" />
+    <ClInclude Include="3rdParty\rapidjson\memorystream.h" />
+    <ClInclude Include="3rdParty\rapidjson\msinttypes\inttypes.h" />
+    <ClInclude Include="3rdParty\rapidjson\msinttypes\stdint.h" />
+    <ClInclude Include="3rdParty\rapidjson\ostreamwrapper.h" />
+    <ClInclude Include="3rdParty\rapidjson\pointer.h" />
+    <ClInclude Include="3rdParty\rapidjson\prettywriter.h" />
+    <ClInclude Include="3rdParty\rapidjson\rapidjson.h" />
+    <ClInclude Include="3rdParty\rapidjson\reader.h" />
+    <ClInclude Include="3rdParty\rapidjson\schema.h" />
+    <ClInclude Include="3rdParty\rapidjson\stream.h" />
+    <ClInclude Include="3rdParty\rapidjson\stringbuffer.h" />
+    <ClInclude Include="3rdParty\rapidjson\writer.h" />
+    <ClInclude Include="3rdParty\rpc_connection.h" />
+    <ClInclude Include="3rdParty\serialization.h" />
     <ClInclude Include="3rdParty\zip.h" />
     <ClInclude Include="AppInit.h" />
     <ClInclude Include="ExceptionHandler.h" />
@@ -234,5 +289,8 @@
       <Project>{3326e128-33af-422c-bb7c-67cc6b915610}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Common\Common.vcxproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="3rdParty\CMakeLists.txt" />
   </ItemGroup>
 </Project>
