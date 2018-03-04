@@ -179,12 +179,13 @@ void CN64System::ExternalEvent(SystemEvent action)
     case SysEvent_PauseCPU_LoadGame:
     case SysEvent_PauseCPU_DumpMemory:
     case SysEvent_PauseCPU_SearchMemory:
-    case SysEvent_PauseCPU_Settings:
-    case SysEvent_PauseCPU_Cheats:
         if (!g_Settings->LoadBool(GameRunning_CPU_Paused))
         {
             QueueEvent(action);
         }
+        break;
+    case SysEvent_PauseCPU_Settings:
+    case SysEvent_PauseCPU_Cheats:
         break;
     case SysEvent_ResumeCPU_FromMenu:
         // always resume if from menu

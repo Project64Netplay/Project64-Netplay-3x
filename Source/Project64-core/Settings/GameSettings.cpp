@@ -49,8 +49,12 @@ void CGameSettings::RefreshGameSettings()
     m_bUseTlb = g_Settings->LoadBool(Game_UseTlb);
     m_ViRefreshRate = g_Settings->LoadDword(Game_ViRefreshRate);
     m_AiCountPerBytes = g_Settings->LoadDword(Game_AiCountPerBytes);
-    m_CountPerOp = g_Settings->LoadDword(Game_CounterFactor);
-    m_RdramSize = g_Settings->LoadDword(Game_RDRamSize);
+    // Project64-MPN: PartyPlanner64 needs Expansion Pak and CountPerOp 1
+    if (strstr(g_Settings->LoadStringVal(Game_GameName).c_str(), "MarioParty") != NULL)
+        m_CountPerOp = 1;
+    else
+        m_CountPerOp = g_Settings->LoadDword(Game_CounterFactor);
+    m_RdramSize = 0x00800000;
     m_DelaySI = g_Settings->LoadBool(Game_DelaySI);
     m_DelayDP = g_Settings->LoadBool(Game_DelayDP);
     m_bFixedAudio = g_Settings->LoadBool(Game_FixedAudio);
