@@ -1,13 +1,363 @@
-﻿// PJ64 v2.2 Official Cheats Database
-// All Region Cheat Codes By Gent.
-// Not for use with PJ64 v1.6 or previous
+﻿// ----------------------------------------------------
+// Mario Party Netplay #the-goods Cheat Database
+// Please visit: https://discord.gg/0qi7VWGokA2Ffr4q
+// And if you're looking at this, tell Celery hello!
 // ----------------------------------------------------
 
 [Meta]
-Author=Project64 team
-Version=2.2.0
-Date=2015/03/30
-Homepage=www.pj64-emu.com
+Author=Celery
+Version=2.0
+Date=2018/03/18
+Homepage=https://discord.gg/0qi7VWGokA2Ffr4q
+
+//========== Start of MP1 codes ==========
+
+[2829657E-A0621877-C:45]
+Cheat0="!!! README"
+Cheat0_N=Make sure all players have the same codes active before starting a game. Trying to cheat by enabling codes that weren't agreed on will only cause a desync and a waste of time. "Recommended" codes do not affect the balance of the game and should be left on, so parties finish quickly and safely.
+Cheat0_O=
+Cheat1="Always On: Mario Party Netplay Codes",81057852 4218,800ED5E2 0002,800ED5E4 0002,D00F09F7 007F,800ED5E2 0000,D10F09F6 0064,810FB1AC 2400,D10F09F6 0040,810FB1AC 2400,81046DDC 2400
+Cheat10="Bonus: Double Cherry (P1 = 1/3)",D00F32B3 0002,800F32B3 0000,D00F32E3 0002,800F32E3 0000,D00F3313 0002,800F3313 0000,D00F3343 0002,800F3343 0000,D00F32B3 0000,800F32B4 00??,D00F32E3 0000,800F32E4 00??,D00F3313 0000,800F3314 00??,D00F3343 0000,800F3344 00??,D00F32B3 0000,800F32B7 0000,D00F32E3 0000,800F32E7 0000,D00F3313 0000,800F3317 0000,D00F3343 0000,800F3347 0000
+Cheat10_N=By: Celery. Player 1 also controls Player 3 with the same character.
+Cheat10_O=$00 Mario,$01 Luigi,$02 Peach,$03 Yoshi,$04 Wario,$05 DK
+Cheat11="Bonus: Double Cherry (P2 = 2/4)",D00F32B3 0003,800F32B3 0001,D00F32E3 0003,800F32E3 0001,D00F3313 0003,800F3313 0001,D00F3343 0003,800F3343 0001,D00F32B3 0001,800F32B4 00??,D00F32E3 0001,800F32E4 00??,D00F3313 0001,800F3314 00??,D00F3343 0001,800F3344 00??,D00F32B3 0001,800F32B7 0000,D00F32E3 0001,800F32E7 0000,D00F3313 0001,800F3317 0000,D00F3343 0001,800F3347 0000
+Cheat11_N=By: Celery. Player 2 also controls Player 4 with the same character.
+Cheat11_O=$00 Mario,$01 Luigi,$02 Peach,$03 Yoshi,$04 Wario,$05 DK
+Cheat12="Always On: Taunting",8109023C 0802,8109023E F3A8,810BCEA0 3C08,810BCEA2 800C,810BCEA4 AD1F,810BCEA6 CE90,810BCEA8 3C08,810BCEAA 800F,810BCEAC 810B,810BCEAE 32B4,810BCEB0 0C02,810BCEB2 F3B8,810BCEB4 810C,810BCEB6 32B3,810BCEB8 810B,810BCEBA 32E4,810BCEBC 0C02,810BCEBE F3B8,810BCEC0 810C,810BCEC2 32E3,810BCEC4 810B,810BCEC6 3314,810BCEC8 0C02,810BCECA F3B8,810BCECC 810C,810BCECE 3313,810BCED0 810B,810BCED2 3344,810BCED4 0C02,810BCED6 F3B8,810BCED8 810C,810BCEDA 3343,810BCEDC 0802,810BCEDE F3D6,810BCEE0 3C0D,810BCEE2 0000,810BCEE4 000D,810BCEE6 6C02,810BCEE8 11AC,810BCEEA 000E,810BCEEC 8D0A,810BCEEE 5460,810BCEF0 3C0D,810BCEF2 0001,810BCEF4 000D,810BCEF6 6C02,810BCEF8 11AC,810BCEFA 000A,810BCEFC 8D0A,810BCEFE 545E,810BCF00 3C0D,810BCF02 0002,810BCF04 000D,810BCF06 6C02,810BCF08 11AC,810BCF0A 0006,810BCF0C 8D0A,810BCF0E 5464,810BCF10 3C0D,810BCF12 0003,810BCF14 000D,810BCF16 6C02,810BCF18 11AC,810BCF1A 0002,810BCF1C 8D0A,810BCF1E 5462,810BCF20 03E0,810BCF22 0008,810BCF24 3C09,810BCF26 0100,810BCF28 1149,810BCF2A 000F,810BCF2C 3C04,810BCF2E 0451,810BCF30 3C09,810BCF32 0200,810BCF34 1149,810BCF36 000C,810BCF38 3C04,810BCF3A 0458,810BCF3C 3C09,810BCF3E 0400,810BCF40 1149,810BCF42 0009,810BCF44 3C04,810BCF46 045F,810BCF48 3C09,810BCF4A 0800,810BCF4C 1149,810BCF4E 0006,810BCF50 3C04,810BCF52 044A,810BCF54 03E0,810BCF56 0008,810BCF58 3C09,810BCF5A 800C,810BCF5C 8D3F,810BCF5E CE90,810BCF60 03E0,810BCF62 0008,810BCF64 2400,810BCF68 0004,810BCF6A 2402,810BCF6C 0C01,810BCF6E 80AB,810BCF70 008B,810BCF72 2020,810BCF74 0802,810BCF76 F3D6,810BCF78 2400
+Cheat12_N=By: Celery. Use the D-Pad to taunt at any time during the game.
+Cheat12_O=
+Cheat13="MG: Bumper Balls: Less Friction",D10F77EA 3F75,810F77EA 3F7A,D10F782A 3F75,810F782A 3F7A
+Cheat13_N=By: gamemasterplc.
+Cheat13_O=
+Cheat14="MG: Restore Move to the Mambo",D10F958A 0026,810F958A 0018,D10F97EE 001D,810F97EE 0018
+Cheat14_N=By: gamemasterplc. Applies to Balloon Burst and Musical Mushrooms.
+Cheat14_O=
+Cheat15="MGR: Replace Unfair Mini-Games",D10ED5DE 0010,810ED5DE 0015,D10ED5DE 0036,810ED5DE 0011,D10ED5DE 0012,810ED5DE 000A
+Cheat15_N=By: Celery. Bash 'n' Cash -> Coin Block Bash, Coin Shower Flower -> Bowl Over, Ground Pound -> Ghost Guess
+Cheat15_O=
+Cheat16="Board: MRC - Visiting Boo Swaps Toad/Bowser",D10F7E7A 0065,810F7E80 080C,D10F7E7A 0065,810F7E82 00B0,813002C0 3C1B,813002C2 800F,813002C4 8766,813002C6 D154,813002C8 38C6,813002CA 0001,813002CC A766,813002CE D154,813002D0 0C01,813002D2 61FB,813002D4 2406,813002D6 0001,813002D8 0803,813002DA DFA2,813002DC 2400
+Cheat16_N=By: gamemasterplc.
+Cheat16_O=
+Cheat17="MGR: Whack-a-Plant -> Same Game",D10F09F6 000F,810F09F6 0006
+Cheat17_N=By: Celery. Try out an unused Mini-Game!
+Cheat17_O=
+Cheat18="MGR: Whack-a-Plant -> Shell Game",D10ED5DE 000F,810ED5DE 0005
+Cheat18_N=By: Celery.
+Cheat18_O=
+Cheat1_N=By: gamemasterplc/Celery. It's recommended this code is left on at all times.
+Cheat1_O=
+Cheat2="Mechanics: Bonus Ztars",D10F7A6A 3D35,810F7A4A FFFF
+Cheat20="Bonus: Multiplayer Mini-Game Island",D10F09F6 0061,810F09F6 0069,800BCF7F 00??,800F32E7 0000,D00BCF7F 0003,800F3317 0000,D00BCF7F 0004,800F3317 0000,D00BCF7F 0004,800F3347 0000
+Cheat20_N=By: Celery. CPUs in Mini-Game Coaster will be controllable by players. Can be combined with Double Cherry or player modifier codes.
+Cheat20_O=$02 2 Players,$03 3 Players,$04 4 Players
+Cheat21="Mechanics: Fast Chance Time Roulette",D10FC4A2 12D4,811012D4 4220,D10FC4A2 12D4,811012D8 4220
+Cheat21_N=By: gamemasterplc. Speeds up Chance Time enough to make it totally luck-dependant.
+Cheat21_O=
+Cheat2_N=By: gamemasterplc. Bonus Stars take away a Star rather than awarding one.
+Cheat2_O=
+Cheat3="MGR: Keyboard Mini-Game Replacements",D10ED5DE 002B,810ED5DE 002D,D10ED5DE 0034,810ED5DE 0009,D10ED5DE 0033,810ED5DE 0032,D10ED5DE 0031,810ED5DE 001D,D10ED5DE 000C,810ED5DE 0020
+Cheat3_N=By: Celery. Recommended if a player in your party is using a keyboard. Cast Aways -> Running of the Bulb, Paddle Battle -> Pipe Maze, Tug o' War -> Piranha's Pursuit, Deep Sea Divers -> Bobsled Run, Pedal Power -> Knock Block Tower
+Cheat3_O=
+Cheat4="Mechanics: Always Win Mushroom Space Rolls",D00D62D1 0003,800D62D1 0004,D00D6315 0003,800D6315 0004,D00D6359 0003,800D6359 0004,D00D639D 0003,800D639D 0004
+Cheat4_N=By: Celery. Makes the Mushroom/Poison Mushroom roll always result in a Mushroom.
+Cheat4_O=
+Cheat5="Board: BMM - Always Win Star Rolls",D00D62D0 0001,800D62D0 0002,D00D6314 0001,800D6314 0002,D00D6358 0001,800D6358 0002,D00D639C 0001,800D639C 0002
+Cheat5_N=By: Celery. Makes the Star/Bowser roll always result in a Star.
+Cheat5_O=
+Cheat6="Board: WBC - Slower Cannon Roulette",D10F7F66 0003,810F7F66 0018
+Cheat6_N=By: gamemasterplc. Slows random space roulette to one eighth of original speed.
+Cheat6_O=
+Cheat7="Board: YTI - Fees Start at 5 Coins",810BCE90 0000,D00ED5C3 0002,800BCE90 00CE,D10F09F6 0062,800BCE91 001E,D10BCE90 CE1E,810ED154 0004,810ED156 0004
+Cheat7_N=By: Celery. Makes the Whomps' fees start at 5 Coins rather than 1.
+Cheat7_O=
+Cheat8="Mechanics: Increased Special Dice Block Chances",81040818 2400,8104082A 0007,810408F0 2400,810408B4 2400,81040878 2400,8104083C 2400,8104092C 2400
+Cheat8_N=By: gamemasterplc. All five special blocks now have a 12.5% chance of appearing each.
+Cheat8_O=
+Cheat9="Mechanics: Always Recieve a Hidden Block",81057BF8 2400
+Cheat9_N=By: gamemasterplc. Hidden blocks appear every time a player lands.
+Cheat9_O=
+Name=Mario Party (U)
+
+[9EA95858-AF72B618-C:45]
+Cheat0="!!! - README"
+Cheat0_N=Make sure all players have the same codes active before starting a game. Trying to cheat by enabling codes that weren't agreed on will only cause a desync and a waste of time. "Recommended" codes do not affect the balance of the game and should be left on, so parties finish quickly and safely.
+Cheat0_O=
+Cheat1="Always On: Mario Party 2 Netplay Codes",800F93CC 0000,800F93CE 0000,D00FA63F 004B,800F93CC 0002,8104F0FC 2400,810657EE 0005,D10D8BE8 2E03,800C3C92 00CE,D30D8BE8 2E03,800C3C92 0000,D10FA63E 005B,800C3C93 001E,D10C3C92 CE1E,81113068 0008,D10C3C92 CE1E,8111306A 0031,81062D8C 1000,D10FA63E 0051,811072A0 2400
+Cheat1_N=
+Cheat1_O=
+Cheat10="Board: Mystery Land: Disable Red Space Island",D110FE10 3AA2,8110FE0C 1000
+Cheat10_N=By: gamemasterplc.
+Cheat10_O=
+Cheat11="Board: Space Land: Laser Always Fires",D110EBE4 1440,8110EBE4 2400
+Cheat11_N=By: gamemasterplc.
+Cheat11_O=
+Cheat12="Mechanics: Bowser's Appearing Act Always On",D10F93C6 0003,810F8D16 0001
+Cheat12_N=By: gamemasterplc.
+Cheat12_O=
+Cheat13="Mechanics: Bowser's Multiplying Toads Always On",810F8D12 0001
+Cheat13_N=By: gamemasterplc.
+Cheat13_O=
+Cheat14="MG: Shell Shocked: Always Third Layout",D10F93C8 0027,800FA656 0002
+Cheat14_N=By: gamemasterplc.
+Cheat14_O=
+Cheat15="Bonus: Multiplayer Mini-Game Coaster",D00FA63F 0057,800FA63F 005C,800C3C90 00??,800FD2FB 0002,D00C3C90 0003,800FD32F 0002,D00C3C90 0004,800FD32F 0002,D00C3C90 0004,800FD363 0002
+Cheat15_N=By: Celery. CPUs in Mini-Game Coaster will be controllable by players. Can be combined with Double Cherry or player modifier codes.
+Cheat15_O=$02 2 Players,$03 3 Players,$04 4 Players
+Cheat16="Bonus: Double Cherry (P1 = 1/3)",D00FD2C3 0002,800FD2C3 0000,D00FD2F7 0002,800FD2F7 0000,D00FD32B 0002,800FD32B 0000,D00FD35F 0002,800FD35F 0000,D00FD2C3 0000,800FD2C4 00??,D00FD2F7 0000,800FD2F8 00??,D00FD32B 0000,800FD32C 00??,D00FD35F 0000,800FD360 00??,D00FD2C3 0000,800FD2C7 0002,D00FD2F7 0000,800FD2FB 0002,D00FD32B 0000,800FD32F 0002,D00FD35F 0000,800FD363 0002
+Cheat16_N=By: Celery. The host will control ports 1 and 3.
+Cheat16_O=$00 Mario,$01 Luigi,$02 Peach,$03 Yoshi,$04 Wario,$05 Donkey Kong
+Cheat17="Bonus: Double Cherry (P2 = 2/4)",D00FD2C3 0003,800FD2C3 0001,D00FD2F7 0003,800FD2F7 0001,D00FD32B 0003,800FD32B 0001,D00FD35F 0003,800FD35F 0001,D00FD2C3 0001,800FD2C4 00??,D00FD2F7 0001,800FD2F8 00??,D00FD32B 0001,800FD32C 00??,D00FD35F 0001,800FD360 00??,D00FD2C3 0001,800FD2C7 0002,D00FD2F7 0001,800FD2FB 0002,D00FD32B 0001,800FD32F 0002,D00FD35F 0001,800FD363 0002
+Cheat17_N=By: Celery. The client will control ports 2 and 4.
+Cheat17_O=$00 Mario,$01 Luigi,$02 Peach,$03 Yoshi,$04 Wario,$05 Donkey Kong
+Cheat18="MGR: Replace Pure Luck Mini-Games",D00F93C9 0041,800F93C9 000C,D00F93C9 000B,800F93C9 0008
+Cheat18_N=By: Celery. Replaces Bowser's Big Blast and Day at the Races with Face Lift and Bumper Balloon Cars respectively.
+Cheat18_O=
+Cheat3="MGR: Replace Shock, Drop or Roll -> Lights Out",D00F93C9 0015,800F93C9 0016
+Cheat3_N=
+Cheat3_O=
+Cheat2="MGR: Replace Bowl Over -> Fillet Relay",D00F93C9 000F,800F93C9 0017
+Cheat2_N=
+Cheat2_O=
+Cheat4="MG: Shock Drop or Roll: No Jumping",D1103FBE 0038,81103FB4 080F,D1103FBE 0038,81103FB6 FC00,813FF000 8282,813FF002 0059,813FF004 2403,813FF006 0034,813FF008 0043,813FF00A 0019,813FF00C 0000,813FF00E 1812,813FF010 3C02,813FF012 800F,813FF014 3442,813FF016 D2C0,813FF018 0062,813FF01A 1021,813FF01C 8042,813FF01E 0003,813FF020 0002,813FF022 1040,813FF024 3C03,813FF026 8010,813FF028 0043,813FF02A 1021,813FF02C A440,813FF02E 163C,813FF030 0C04,813FF032 0C40,813FF034 2400,813FF038 0804,813FF03A 0FEF
+Cheat4_N=By: gamemasterplc.
+Cheat4_O=
+Cheat5="MG: Bumper Balls: Less Friction",D11040A2 3F75,811040A2 3F7A,D1104112 3F75,81104112 3F7A
+Cheat5_N=By: gamemasterplc/Celery.
+Cheat5_O=
+Cheat6="Board: Pirate Land: Sushi Spaces are Happening Spaces",D012C64D 0001,8012C64D 0004,D012C8B1 0001,8012C8B1 0004,D012C9F5 0001,8012C9F5 0004
+Cheat6_N=By: gamemasterplc.
+Cheat6_O=
+Cheat7="Board: Pirate Land: No Sushi Spaces",D110F458 AFB6,8110F47C 0804,D110F458 AFB6,8110F47E 3EF0
+Cheat7_N=By: gamemasterplc.
+Cheat7_O=
+Cheat8="Board: Western Land: Train Always Goes Forward",D1110B38 1200,81110B34 2410,D1110B38 1200,81110B34 0001
+Cheat8_N=By: gamemasterplc.
+Cheat8_O=
+Cheat9="MGR: Keyboard Mini-Game Replacements",D00F93C9 0013,800F93C9 0014
+Cheat9_N=By: Celery. Replaces Bob-Omb Barrage with Look Away. Recommended if a player is using a keyboard.
+Cheat9_O=
+Name=Mario Party 2 (U)
+
+[7C3829D9-6E8247CE-C:45]
+Cheat1="Always On: Mario Party 3 Netplay Codes",810A12D6 0000,81009C10 080F,81009C12 FC00,81009C14 27BD,81009C16 FFE8,813FF000 3C05,813FF002 0013,813FF004 24A5,813FF006 0046,813FF008 1485,813FF00A 000B,813FF00C 2400,813FF010 3C04,813FF012 0013,813FF014 2484,813FF016 001C,813FF018 3C1B,813FF01A 800D,813FF01C 8365,813FF01E D058,813FF020 8366,813FF022 D059,813FF024 30A5,813FF026 0001,813FF028 1405,813FF02A 0002,813FF02C 2400,813FF030 2484,813FF032 000C,813FF034 0086,813FF036 2021,813FF038 0800,813FF03A 2706,813FF03C AFBF,813FF03E 0014,D11095AA 2484,81109348 2400
+Cheat10="Board: Waluigi's Island: Roulette is Always",D110907A 6000,81109070 2415,D110907A 6000,81109072 00??
+Cheat10_N=
+Cheat10_O=$08 Slow,$04 Medium,$02 Fast
+Cheat11="Mechanics: Duel Partner Roulette Always",800CD0B3 00??
+Cheat11_N=By: gamemasterplc.
+Cheat11_O=$02 Slow,$00 Fast
+Cheat12="Mechanics: Game Guy Spaces Do Nothing",D11026D6 E9C0,811026D6 EEBC
+Cheat12_N=
+Cheat12_O=
+Cheat13="MGR: Replace Pure Luck Mini-Games",D00CD068 0033,800CD068 0031,D00CD068 002A,800CD068 0029,D00CD068 002D,800CD068 0030
+Cheat13_N=By: Celery. End of the Line -> Vine With Me, Stacked Deck -> All Fired Up, Merry Go Chomp -> Eye Sore
+Cheat13_O=
+Cheat0="!!! - README"
+Cheat0_N=Make sure all players have the same codes active before starting a game. Trying to cheat by enabling codes that weren't agreed on will only cause a desync and a waste of time. "Recommended" codes do not affect the balance of the game and should be left on, so parties finish quickly and safely.
+Cheat0_O=
+Cheat15="MGR: Replace Unfair Mini-Games",D00CD068 0028,800CD068 0019,D00CD068 0020,800CD068 0016,D00CD068 0009,800CD068 0008,D00CD068 000A,800CD068 0002
+Cheat15_N=By: Celery. Snowball Summit -> Ice Rink Risk; The Beat Goes On -> Toadstool Titan; River Raiders -> Thwomp Pull; Tidal Toss -> Coconut Conk
+Cheat15_O=
+Cheat16="Bonus: Double Cherry (P1 = 1/3)",D00D110A 0002,800D110A 0000,D00D1142 0002,800D1142 0000,D00D117A 0002,800D117A 0000,D00D11B2 0002,800D11B2 0000,D00D110A 0000,800D110B 00??,D00D1142 0000,800D1143 00??,D00D117A 0000,800D117B 00??,D00D11B2 0000,800D11B3 00??,D00D110A 0000,800D110C 0004,D00D1142 0000,800D1144 0004,D00D117A 0000,800D117C 0004,D00D11B2 0000,800D11B4 0004
+Cheat16_N=By: Celery. Host will control ports 1 and 3.
+Cheat16_O=$00 Mario,$01 Luigi,$02 Peach,$03 Yoshi,$04 Wario,$05 Donkey Kong,$06 Waluigi,$07 Daisy
+Cheat17="Bonus: Double Cherry (P2 = 2/4)",D00D110A 0003,800D110A 0001,D00D1142 0003,800D1142 0001,D00D117A 0003,800D117A 0001,D00D11B2 0003,800D11B2 0001,D00D110A 0001,800D110B 00??,D00D1142 0001,800D1143 00??,D00D117A 0001,800D117B 00??,D00D11B2 0001,800D11B3 00??,D00D110A 0001,800D110C 0004,D00D1142 0001,800D1144 0004,D00D117A 0001,800D117C 0004,D00D11B2 0001,800D11B4 0004
+Cheat17_N=By: Celery. Client will control ports 2 and 4.
+Cheat17_O=$00 Mario,$01 Luigi,$02 Peach,$03 Yoshi,$04 Wario,$05 Donkey Kong,$06 Waluigi,$07 Daisy
+Cheat18="Board: Waluigi's Island: Bomb Counter Always at 1",D10CD098 0005,810CD098 0001
+Cheat18_N=
+Cheat18_O=
+Cheat19="Board: Waluigi's Island: Island Space is Always",D10CE202 004D,810CD09A 00??
+Cheat19_N=
+Cheat19_O=$00 Blue Space,$02 Red Space,$04 Item Space,$06 Bowser Space,$07 Battle Space,$08 Game Guy Space,$09 Chance Time,$0A Nothing
+Cheat1_N=By: gamemasterplc
+Cheat1_O=
+Cheat2="MG: Spotlight Swim: More Diving Time",D110899A 0002,81108992 007E
+Cheat20="MGR: Keyboard Mini-Game Replacements",D00CD068 0001,800CD068 0004
+Cheat20_N=By: Celery. Recommended if a player in your party is using a keyboard. (Hand, Line and Sinker -> Boulder Ball)
+Cheat20_O=
+Cheat21="MGR: Replace Swing 'n' Swipe -> Swinging With Sharks",D00CD068 0040,800CD068 003F
+Cheat21_N=By: Celery.
+Cheat21_O=
+Cheat22="Mechanics: Boo Coin Steals Cost 15 Coins",D110E38A 0005,8110E38A 000F,D110E8BE FFFB,8110E8BE FFF1,D110E8CA FFFB,8110E8CA FFF1,D110DEF2 0005,8110DEF2 000F,D110E426 FFFB,8110E426 FFF1,D110E432 FFFB,8110E432 FFF1,D110DF2A 0005,8110DF2A 000F,D110E45E FFFB,8110E45E FFF1,D110E46A FFFB,8110E46A FFF1,D110E462 0005,8110E462 000F,D110E996 FFFB,8110E996 FFF1,D110E9A2 FFFB,8110E9A2 FFF1,D110D936 0005,8110D936 000F,D110DE6A FFFB,8110DE6A FFF1,D110DE76 FFFB,8110DE76 FFF1,D110F71A 0005,8110F71A 000F,D110FC4E FFFB,8110FC4E FFF1,D110FC5A FFFB,8110FC5A FFF1
+Cheat22_N=By: Celery. Recommended for Reverse Mode.
+Cheat22_O=
+Cheat14="Mechanics: Boo Star Steals Cost 100 Coins",D110E4D2 0032,8110E4D2 0064,D110E8D6 FFCE,8110E8D6 FF9C,D110E8DE FFCE,8110E8DE FF9C,D110E03A 0032,8110E03A 0064,D110E43E FFCE,8110E43E FF9C,D110E446 FFCE,8110E446 FF9C,D110E072 0032,8110E072 0064,D110E476 FFCE,8110E476 FF9C,D110E47E FFCE,8110E47E FF9C,D110E5AA 0032,8110E5AA 0064,D110E9AE FFCE,8110E9AE FF9C,D110E9B6 FFCE,8110E9B6 FF9C,D110DA7E 0032,8110DA7E 0064,D110DE82 FFCE,8110DE82 FF9C,D110DE8A FFCE,8110DE8A FF9C,D110F862 0032,8110F862 0064,D110FC66 FFCE,8110FC66 FF9C,D110FC6E FFCE,8110FC6E FF9C
+Cheat14_N=By: Celery. Recommended for Reverse Mode.
+Cheat14_O=
+Cheat2_N=
+Cheat2_O=
+Cheat3="MG: M.P.I.Q.: Instant Text Display",D110BC62 0005,8110BC62 0000
+Cheat3_N=
+Cheat3_O=
+Cheat4="Bonus: Reverse Mode",D10FD196 0080,810FD194 3442,D10FD196 0080,810FD198 A242,D10FD196 0080,810FD19A 0017,D00D1120 0003,800D1120 0002,D00D1121 0003,800D1121 0002,D00D1122 0003,800D1122 0002,D00D1158 0003,800D1158 0002,D00D1159 0003,800D1159 0002,D00D115A 0003,800D115A 0002,D00D1190 0003,800D1190 0002,D00D1191 0003,800D1191 0002,D00D1192 0003,800D1192 0002,D00D11C8 0003,800D11C8 0002,D00D11C9 0003,800D11C9 0002,D00D11CA 0003,800D11CA 0002
+Cheat4_N=By: gamemasterplc.
+Cheat4_O=
+Cheat5="Board: Chilly Waters: No Ice Slip",D1118AD6 60C2,81118AC4 1000
+Cheat5_N=
+Cheat5_O=
+Cheat6="Board: Deep Bloober Sea: No Missiles",D111861E 0005,81118610 1000,D111861E 0005,81118398 A480
+Cheat6_N=
+Cheat6_O=
+Cheat7="Board: Spiny Desert: Both Stars are Real",D110A312 0001,8110A314 2400
+Cheat7_N=
+Cheat7_O=
+Cheat8="Board: Waluigi's Island: Always Pass Hole Trap",D110A902 0124,8110A900 1000
+Cheat8_N=
+Cheat8_O=
+Cheat9="Board: Waluigi's Island: Never Fast Roulette",D111E100 0204,8111E100 0404
+Cheat9_N=
+Cheat9_O=
+Name=Mario Party 3 (U)
+
+[FC800626-85C17FC3-C:45]
+Cheat1="Always On: Mario Party 3 Netplay Codes",810A12D6 0000,D11095AA 2484,81109348 2400
+Cheat10="Board: Waluigi's Island: Roulette is Always",D110907A 6000,81109070 2415,D110907A 6000,81109072 00??
+Cheat10_N=
+Cheat10_O=$08 Slow,$04 Medium,$02 Fast
+Cheat11="Mechanics: Duel Partner Roulette Always",800CD0B3 00??
+Cheat11_N=By: gamemasterplc.
+Cheat11_O=$02 Slow,$00 Fast
+Cheat12="Mechanics: Game Guy Spaces Do Nothing",D11026D6 E9C0,811026D6 EEBC
+Cheat12_N=
+Cheat12_O=
+Cheat13="MGR: Replace Pure Luck Mini-Games",D00CD068 0033,800CD068 0031,D00CD068 002A,800CD068 0029,D00CD068 002D,800CD068 0030
+Cheat13_N=By: Celery. End of the Line -> Vine With Me, Stacked Deck -> All Fired Up, Merry Go Chomp -> Eye Sore
+Cheat13_O=
+Cheat0="!!! - README"
+Cheat0_N=Make sure all players have the same codes active before starting a game. Trying to cheat by enabling codes that weren't agreed on will only cause a desync and a waste of time. "Recommended" codes do not affect the balance of the game and should be left on, so parties finish quickly and safely.
+Cheat0_O=
+Cheat15="MGR: Replace Unfair Mini-Games",D00CD068 0028,800CD068 0019,D00CD068 0020,800CD068 0016,D00CD068 0009,800CD068 0008,D00CD068 000A,800CD068 0002
+Cheat15_N=By: Celery. Snowball Summit -> Ice Rink Risk; The Beat Goes On -> Toadstool Titan; River Raiders -> Thwomp Pull; Tidal Toss -> Coconut Conk
+Cheat15_O=
+Cheat16="Bonus: Double Cherry (P1 = 1/3)",D00D110A 0002,800D110A 0000,D00D1142 0002,800D1142 0000,D00D117A 0002,800D117A 0000,D00D11B2 0002,800D11B2 0000,D00D110A 0000,800D110B 00??,D00D1142 0000,800D1143 00??,D00D117A 0000,800D117B 00??,D00D11B2 0000,800D11B3 00??,D00D110A 0000,800D110C 0004,D00D1142 0000,800D1144 0004,D00D117A 0000,800D117C 0004,D00D11B2 0000,800D11B4 0004
+Cheat16_N=By: Celery. Host will control ports 1 and 3.
+Cheat16_O=$00 Mario,$01 Luigi,$02 Peach,$03 Yoshi,$04 Wario,$05 Donkey Kong,$06 Waluigi,$07 Daisy
+Cheat17="Bonus: Double Cherry (P2 = 2/4)",D00D110A 0003,800D110A 0001,D00D1142 0003,800D1142 0001,D00D117A 0003,800D117A 0001,D00D11B2 0003,800D11B2 0001,D00D110A 0001,800D110B 00??,D00D1142 0001,800D1143 00??,D00D117A 0001,800D117B 00??,D00D11B2 0001,800D11B3 00??,D00D110A 0001,800D110C 0004,D00D1142 0001,800D1144 0004,D00D117A 0001,800D117C 0004,D00D11B2 0001,800D11B4 0004
+Cheat17_N=By: Celery. Client will control ports 2 and 4.
+Cheat17_O=$00 Mario,$01 Luigi,$02 Peach,$03 Yoshi,$04 Wario,$05 Donkey Kong,$06 Waluigi,$07 Daisy
+Cheat18="Board: Waluigi's Island: Bomb Counter Always at 1",D10CD098 0005,810CD098 0001
+Cheat18_N=
+Cheat18_O=
+Cheat19="Board: Waluigi's Island: Island Space is Always",D10CE202 004D,810CD09A 00??
+Cheat19_N=
+Cheat19_O=$00 Blue Space,$02 Red Space,$04 Item Space,$06 Bowser Space,$07 Battle Space,$08 Game Guy Space,$09 Chance Time,$0A Nothing
+Cheat1_N=By: gamemasterplc
+Cheat1_O=
+Cheat2="MG: Spotlight Swim: More Diving Time",D110899A 0002,81108992 007E
+Cheat20="MGR: Keyboard Mini-Game Replacements",D00CD068 0001,800CD068 0004
+Cheat20_N=By: Celery. Recommended if a player in your party is using a keyboard. (Hand, Line and Sinker -> Boulder Ball)
+Cheat20_O=
+Cheat21="MGR: Replace Swing 'n' Swipe -> Swinging With Sharks",D00CD068 0040,800CD068 003F
+Cheat21_N=By: Celery.
+Cheat21_O=
+Cheat22="Mechanics: Boo Coin Steals Cost 15 Coins",D110E38A 0005,8110E38A 000F,D110E8BE FFFB,8110E8BE FFF1,D110E8CA FFFB,8110E8CA FFF1,D110DEF2 0005,8110DEF2 000F,D110E426 FFFB,8110E426 FFF1,D110E432 FFFB,8110E432 FFF1,D110DF2A 0005,8110DF2A 000F,D110E45E FFFB,8110E45E FFF1,D110E46A FFFB,8110E46A FFF1,D110E462 0005,8110E462 000F,D110E996 FFFB,8110E996 FFF1,D110E9A2 FFFB,8110E9A2 FFF1,D110D936 0005,8110D936 000F,D110DE6A FFFB,8110DE6A FFF1,D110DE76 FFFB,8110DE76 FFF1,D110F71A 0005,8110F71A 000F,D110FC4E FFFB,8110FC4E FFF1,D110FC5A FFFB,8110FC5A FFF1
+Cheat22_N=By: Celery. Recommended for Reverse Mode.
+Cheat22_O=
+Cheat14="Mechanics: Boo Star Steals Cost 100 Coins",D110E4D2 0032,8110E4D2 0064,D110E8D6 FFCE,8110E8D6 FF9C,D110E8DE FFCE,8110E8DE FF9C,D110E03A 0032,8110E03A 0064,D110E43E FFCE,8110E43E FF9C,D110E446 FFCE,8110E446 FF9C,D110E072 0032,8110E072 0064,D110E476 FFCE,8110E476 FF9C,D110E47E FFCE,8110E47E FF9C,D110E5AA 0032,8110E5AA 0064,D110E9AE FFCE,8110E9AE FF9C,D110E9B6 FFCE,8110E9B6 FF9C,D110DA7E 0032,8110DA7E 0064,D110DE82 FFCE,8110DE82 FF9C,D110DE8A FFCE,8110DE8A FF9C,D110F862 0032,8110F862 0064,D110FC66 FFCE,8110FC66 FF9C,D110FC6E FFCE,8110FC6E FF9C
+Cheat14_N=By: Celery. Recommended for Reverse Mode.
+Cheat14_O=
+Cheat2_N=
+Cheat2_O=
+Cheat3="MG: M.P.I.Q.: Instant Text Display",D110BC62 0005,8110BC62 0000
+Cheat3_N=
+Cheat3_O=
+Cheat4="Bonus: Reverse Mode",D10FD196 0080,810FD194 3442,D10FD196 0080,810FD198 A242,D10FD196 0080,810FD19A 0017,D00D1120 0003,800D1120 0002,D00D1121 0003,800D1121 0002,D00D1122 0003,800D1122 0002,D00D1158 0003,800D1158 0002,D00D1159 0003,800D1159 0002,D00D115A 0003,800D115A 0002,D00D1190 0003,800D1190 0002,D00D1191 0003,800D1191 0002,D00D1192 0003,800D1192 0002,D00D11C8 0003,800D11C8 0002,D00D11C9 0003,800D11C9 0002,D00D11CA 0003,800D11CA 0002
+Cheat4_N=By: gamemasterplc.
+Cheat4_O=
+Cheat5="Board: Chilly Waters: No Ice Slip",D1118AD6 60C2,81118AC4 1000
+Cheat5_N=
+Cheat5_O=
+Cheat6="Board: Deep Bloober Sea: No Missiles",D111861E 0005,81118610 1000,D111861E 0005,81118398 A480
+Cheat6_N=
+Cheat6_O=
+Cheat7="Board: Spiny Desert: Both Stars are Real",D110A312 0001,8110A314 2400
+Cheat7_N=
+Cheat7_O=
+Cheat8="Board: Waluigi's Island: Always Pass Hole Trap",D110A902 0124,8110A900 1000
+Cheat8_N=
+Cheat8_O=
+Cheat9="Board: Waluigi's Island: Never Fast Roulette",D111E100 0204,8111E100 0404
+Cheat9_N=
+Cheat9_O=
+Name=Mario Party 3 (U)
+
+[7C3829D9-6E8247CE-C:45]
+Cheat1="Always On: Mario Party 3 Netplay Codes",810A12D6 0000,D11095AA 2484,81109348 2400
+Cheat10="Board: Waluigi's Island: Roulette is Always",D110907A 6000,81109070 2415,D110907A 6000,81109072 00??
+Cheat10_N=
+Cheat10_O=$08 Slow,$04 Medium,$02 Fast
+Cheat11="Mechanics: Duel Partner Roulette Always",800CD0B3 00??
+Cheat11_N=By: gamemasterplc.
+Cheat11_O=$02 Slow,$00 Fast
+Cheat12="Mechanics: Game Guy Spaces Do Nothing",D11026D6 E9C0,811026D6 EEBC
+Cheat12_N=
+Cheat12_O=
+Cheat13="MGR: Replace Pure Luck Mini-Games",D00CD068 0033,800CD068 0031,D00CD068 002A,800CD068 0029,D00CD068 002D,800CD068 0030
+Cheat13_N=By: Celery. End of the Line -> Vine With Me, Stacked Deck -> All Fired Up, Merry Go Chomp -> Eye Sore
+Cheat13_O=
+Cheat0="!!! - README"
+Cheat0_N=Make sure all players have the same codes active before starting a game. Trying to cheat by enabling codes that weren't agreed on will only cause a desync and a waste of time. "Recommended" codes do not affect the balance of the game and should be left on, so parties finish quickly and safely.
+Cheat0_O=
+Cheat15="MGR: Replace Unfair Mini-Games",D00CD068 0028,800CD068 0019,D00CD068 0020,800CD068 0016,D00CD068 0009,800CD068 0008,D00CD068 000A,800CD068 0002
+Cheat15_N=By: Celery. Snowball Summit -> Ice Rink Risk; The Beat Goes On -> Toadstool Titan; River Raiders -> Thwomp Pull; Tidal Toss -> Coconut Conk
+Cheat15_O=
+Cheat16="Bonus: Double Cherry (P1 = 1/3)",D00D110A 0002,800D110A 0000,D00D1142 0002,800D1142 0000,D00D117A 0002,800D117A 0000,D00D11B2 0002,800D11B2 0000,D00D110A 0000,800D110B 00??,D00D1142 0000,800D1143 00??,D00D117A 0000,800D117B 00??,D00D11B2 0000,800D11B3 00??,D00D110A 0000,800D110C 0004,D00D1142 0000,800D1144 0004,D00D117A 0000,800D117C 0004,D00D11B2 0000,800D11B4 0004
+Cheat16_N=By: Celery. Host will control ports 1 and 3.
+Cheat16_O=$00 Mario,$01 Luigi,$02 Peach,$03 Yoshi,$04 Wario,$05 Donkey Kong,$06 Waluigi,$07 Daisy
+Cheat17="Bonus: Double Cherry (P2 = 2/4)",D00D110A 0003,800D110A 0001,D00D1142 0003,800D1142 0001,D00D117A 0003,800D117A 0001,D00D11B2 0003,800D11B2 0001,D00D110A 0001,800D110B 00??,D00D1142 0001,800D1143 00??,D00D117A 0001,800D117B 00??,D00D11B2 0001,800D11B3 00??,D00D110A 0001,800D110C 0004,D00D1142 0001,800D1144 0004,D00D117A 0001,800D117C 0004,D00D11B2 0001,800D11B4 0004
+Cheat17_N=By: Celery. Client will control ports 2 and 4.
+Cheat17_O=$00 Mario,$01 Luigi,$02 Peach,$03 Yoshi,$04 Wario,$05 Donkey Kong,$06 Waluigi,$07 Daisy
+Cheat18="Board: Waluigi's Island: Bomb Counter Always at 1",D10CD098 0005,810CD098 0001
+Cheat18_N=
+Cheat18_O=
+Cheat19="Board: Waluigi's Island: Island Space is Always",D10CE202 004D,810CD09A 00??
+Cheat19_N=
+Cheat19_O=$00 Blue Space,$02 Red Space,$04 Item Space,$06 Bowser Space,$07 Battle Space,$08 Game Guy Space,$09 Chance Time,$0A Nothing
+Cheat1_N=By: gamemasterplc
+Cheat1_O=
+Cheat2="MG: Spotlight Swim: More Diving Time",D110899A 0002,81108992 007E
+Cheat20="MGR: Keyboard Mini-Game Replacements",D00CD068 0001,800CD068 0004
+Cheat20_N=By: Celery. Recommended if a player in your party is using a keyboard. (Hand, Line and Sinker -> Boulder Ball)
+Cheat20_O=
+Cheat21="MGR: Replace Swing 'n' Swipe -> Swinging With Sharks",D00CD068 0040,800CD068 003F
+Cheat21_N=By: Celery.
+Cheat21_O=
+Cheat22="Mechanics: Boo Coin Steals Cost 15 Coins",D110E38A 0005,8110E38A 000F,D110E8BE FFFB,8110E8BE FFF1,D110E8CA FFFB,8110E8CA FFF1,D110DEF2 0005,8110DEF2 000F,D110E426 FFFB,8110E426 FFF1,D110E432 FFFB,8110E432 FFF1,D110DF2A 0005,8110DF2A 000F,D110E45E FFFB,8110E45E FFF1,D110E46A FFFB,8110E46A FFF1,D110E462 0005,8110E462 000F,D110E996 FFFB,8110E996 FFF1,D110E9A2 FFFB,8110E9A2 FFF1,D110D936 0005,8110D936 000F,D110DE6A FFFB,8110DE6A FFF1,D110DE76 FFFB,8110DE76 FFF1,D110F71A 0005,8110F71A 000F,D110FC4E FFFB,8110FC4E FFF1,D110FC5A FFFB,8110FC5A FFF1
+Cheat22_N=By: Celery. Recommended for Reverse Mode.
+Cheat22_O=
+Cheat14="Mechanics: Boo Star Steals Cost 100 Coins",D110E4D2 0032,8110E4D2 0064,D110E8D6 FFCE,8110E8D6 FF9C,D110E8DE FFCE,8110E8DE FF9C,D110E03A 0032,8110E03A 0064,D110E43E FFCE,8110E43E FF9C,D110E446 FFCE,8110E446 FF9C,D110E072 0032,8110E072 0064,D110E476 FFCE,8110E476 FF9C,D110E47E FFCE,8110E47E FF9C,D110E5AA 0032,8110E5AA 0064,D110E9AE FFCE,8110E9AE FF9C,D110E9B6 FFCE,8110E9B6 FF9C,D110DA7E 0032,8110DA7E 0064,D110DE82 FFCE,8110DE82 FF9C,D110DE8A FFCE,8110DE8A FF9C,D110F862 0032,8110F862 0064,D110FC66 FFCE,8110FC66 FF9C,D110FC6E FFCE,8110FC6E FF9C
+Cheat14_N=By: Celery. Recommended for Reverse Mode.
+Cheat14_O=
+Cheat2_N=
+Cheat2_O=
+Cheat3="MG: M.P.I.Q.: Instant Text Display",D110BC62 0005,8110BC62 0000
+Cheat3_N=
+Cheat3_O=
+Cheat4="Bonus: Reverse Mode",D10FD196 0080,810FD194 3442,D10FD196 0080,810FD198 A242,D10FD196 0080,810FD19A 0017,D00D1120 0003,800D1120 0002,D00D1121 0003,800D1121 0002,D00D1122 0003,800D1122 0002,D00D1158 0003,800D1158 0002,D00D1159 0003,800D1159 0002,D00D115A 0003,800D115A 0002,D00D1190 0003,800D1190 0002,D00D1191 0003,800D1191 0002,D00D1192 0003,800D1192 0002,D00D11C8 0003,800D11C8 0002,D00D11C9 0003,800D11C9 0002,D00D11CA 0003,800D11CA 0002
+Cheat4_N=By: gamemasterplc.
+Cheat4_O=
+Cheat5="Board: Chilly Waters: No Ice Slip",D1118AD6 60C2,81118AC4 1000
+Cheat5_N=
+Cheat5_O=
+Cheat6="Board: Deep Bloober Sea: No Missiles",D111861E 0005,81118610 1000,D111861E 0005,81118398 A480
+Cheat6_N=
+Cheat6_O=
+Cheat7="Board: Spiny Desert: Both Stars are Real",D110A312 0001,8110A314 2400
+Cheat7_N=
+Cheat7_O=
+Cheat8="Board: Waluigi's Island: Always Pass Hole Trap",D110A902 0124,8110A900 1000
+Cheat8_N=
+Cheat8_O=
+Cheat9="Board: Waluigi's Island: Never Fast Roulette",D111E100 0204,8111E100 0404
+Cheat9_N=
+Cheat9_O=
+Name=Mario Party 3: Costume Party
+
+[930C29EA-939245BF-C:45]
+Cheat0="RECOMMENDED: Unlock All",8125916E 0101,80259170 0001,8025915C 0001,8125915E 0101,81259160 0101
+Cheat0_N=
+Cheat0_O=
 
 //--------------- (J) Region Cheat Codes ---------------
 
@@ -751,42 +1101,6 @@ Cheat0="Have Bonus Mode and All Gold Cups",E86E0B30 59??,E86E0B2F 59??,E86E0B2E 
 Cheat0_O=$5A Off,$4F On
 Cheat1="Press F9\For Full Debug Menu",8818B5BF 0002
 Cheat1_N=Press F9 at the Press Start Menu to access the Debug Menu
-
-//----
-
-[ADA815BE-6028622F-C:4A]
-Name=Mario Party (J)
-Cheat0="Top Left Character\Coin Options",E8637A5F 59??
-Cheat1="Top Left Character\Star Options",E8637A63 59??
-Cheat2="Top Right Character\Coin Options",E8637A8F 59??
-Cheat3="Top Right Character\Star Options",E8637A93 59??
-Cheat4="Lower Left Character\Coin Options",E8637ABF 59??
-Cheat5="Lower Left Character\Star Options",E8637AC3 59??
-Cheat6="Lower Right Character\Coin Options",E8637AEF 59??
-Cheat7="Lower Right Character\Star Options",E8637AF3 59??
-Cheat8="Top Left Character\Dice Always",E861AAD6 59??
-Cheat9="Top Right Character\Dice Always",E861AA1A 59??
-Cheat10="Lower Left Character\Dice Always",E861AF5E 59??
-Cheat11="Lower Right Character\Dice Always",E861AFA2 59??
-Cheat12="Mini Game\Unlimited 99 lives",E8638355 59BB
-Cheat13="Mini Game\Max 99 Coins",E8638364 59BB
-Cheat0_O=$5A 0 Coins,$64 10 Coins,$B6 100 Coins,$4F 255 Coins
-Cheat1_O=$5A 0 Stars,$B6 99 Stars
-Cheat2_O=$5A 0 Coins,$64 10 Coins,$B6 100 Coins,$4F 255 Coins
-Cheat3_O=$5A 0 Stars,$B6 99 Stars
-Cheat4_O=$5A 0 Coins,$64 10 Coins,$B6 100 Coins,$4F 255 Coins
-Cheat5_O=$5A 0 Stars,$B6 99 Stars
-Cheat6_O=$5A 0 Coins,$64 10 Coins,$B6 100 Coins,$4F 255 Coins
-Cheat7_O=$5A 0 Stars,$B6 99 Stars
-Cheat8_O=$5A Rolls In Random,$59 Rolls In 1,$5C Rolls In 2,$5B Rolls In 3,$56 Rolls In 4,$55 Rolls In 5,$58 Rolls In 6,$57 Rolls In 7,$62 Rolls In 8,$61 Rolls In 9,$64 Rolls In 10
-Cheat9_O=$5A Rolls In Random,$59 Rolls In 1,$5C Rolls In 2,$5B Rolls In 3,$56 Rolls In 4,$55 Rolls In 5,$58 Rolls In 6,$57 Rolls In 7,$62 Rolls In 8,$61 Rolls In 9,$64 Rolls In 10
-Cheat10_O=$5A Rolls In Random,$59 Rolls In 1,$5C Rolls In 2,$5B Rolls In 3,$56 Rolls In 4,$55 Rolls In 5,$58 Rolls In 6,$57 Rolls In 7,$62 Rolls In 8,$61 Rolls In 9,$64 Rolls In 10
-Cheat11_O=$5A Rolls In Random,$59 Rolls In 1,$5C Rolls In 2,$5B Rolls In 3,$56 Rolls In 4,$55 Rolls In 5,$58 Rolls In 6,$57 Rolls In 7,$62 Rolls In 8,$61 Rolls In 9,$64 Rolls In 10
-Cheat0_N=If you want to have full 255 Coins,1st use the 100 Option then put on 255. this will stop the numbers from changing  & spoiling the result.
-Cheat8_N=With this option you can calculate exactly how many you need to get on the position of your choice.
-Cheat9_N=With this option you can calculate exactly how many you need to get on the position of your choice.
-Cheat10_N=With this option you can calculate exactly how many you need to get on the position of your choice.
-Cheat11_N=With this option you can calculate exactly how many you need to get on the position of your choice.
 
 //----
 
@@ -5812,102 +6126,6 @@ Cheat17_N=Press F9 at the Press Start Menu to access the Debug Menu
 
 //----
 
-[2829657E-A0621877-C:45]
-Name=Mario Party (U)
-Cheat0="Top Left Character\Coin Options",E8638510 59??
-Cheat1="Top Left Character\Star Options",E8638514 59??
-Cheat2="Top Right Character\Coin Options",E8638540 59??
-Cheat3="Top Right Character\Star Options",E8638544 59??
-Cheat4="Lower Left Character\Coin Options",E8638670 59??
-Cheat5="Lower Left Character\Star Options",E8638674 59??
-Cheat6="Lower Right Character\Coin Options",E86386A0 59??
-Cheat7="Lower Right Character\Star Options",E86386A4 59??
-Cheat8="Top Left Character\Dice Always",E861B525 59??
-Cheat9="Top Right Character\Dice Always",E861B669 59??
-Cheat10="Lower Left Character\Dice Always",E861B6AD 59??
-Cheat11="Lower Right Character\Dice Always",E861B6F1 59??
-Cheat12="Mini Game\Unlimited 99 lives",E8638AB9 59BB
-Cheat13="Mini Game\Max 99 Coins",E8638AC8 59BB
-Cheat14="Board Select",E8642C15 59??
-Cheat14_O=$5A DK's Jungle Adventure,$59 Peach's Birthday Cake,$5C Yoshi's Tropical Island,$5B Wario's Battle Canyon,$56 Luigi's Engine Room,$55 Mario's Rainbow Castle,$58 Bowser's Magma Mountain,$57 Eternal Star,$62 Explaination Map,$61 Mini Game Stadium
-Cheat15="Mini Game Island\Press F9 For 99 Lives",880F37BB 0063
-Cheat16="Mini Game Island\99 Coins",E8638A1C 59BB
-Cheat17="Mini Game Island\Always Clear Level",E863850D 59BB
-Cheat18="Mini Game Island\World Level Select",E963851C ????
-Cheat0_O=$5A 0 Coins,$64 10 Coins,$B6 100 Coins,$4F 255 Coins
-Cheat1_O=$5A 0 Stars,$B6 99 Stars
-Cheat2_O=$5A 0 Coins,$64 10 Coins,$B6 100 Coins,$4F 255 Coins
-Cheat3_O=$5A 0 Stars,$B6 99 Stars
-Cheat4_O=$5A 0 Coins,$64 10 Coins,$B6 100 Coins,$4F 255 Coins
-Cheat5_O=$5A 0 Stars,$B6 99 Stars
-Cheat6_O=$5A 0 Coins,$64 10 Coins,$B6 100 Coins,$4F 255 Coins
-Cheat7_O=$5A 0 Stars,$B6 99 Stars
-Cheat8_O=$5A Rolls In Random,$59 Rolls In 1,$5C Rolls In 2,$5B Rolls In 3,$56 Rolls In 4,$55 Rolls In 5,$58 Rolls In 6,$57 Rolls In 7,$62 Rolls In 8,$61 Rolls In 9,$64 Rolls In 10
-Cheat9_O=$5A Rolls In Random,$59 Rolls In 1,$5C Rolls In 2,$5B Rolls In 3,$56 Rolls In 4,$55 Rolls In 5,$58 Rolls In 6,$57 Rolls In 7,$62 Rolls In 8,$61 Rolls In 9,$64 Rolls In 10
-Cheat10_O=$5A Rolls In Random,$59 Rolls In 1,$5C Rolls In 2,$5B Rolls In 3,$56 Rolls In 4,$55 Rolls In 5,$58 Rolls In 6,$57 Rolls In 7,$62 Rolls In 8,$61 Rolls In 9,$64 Rolls In 10
-Cheat11_O=$5A Rolls In Random,$59 Rolls In 1,$5C Rolls In 2,$5B Rolls In 3,$56 Rolls In 4,$55 Rolls In 5,$58 Rolls In 6,$57 Rolls In 7,$62 Rolls In 8,$61 Rolls In 9,$64 Rolls In 10
-Cheat18_O=$595A Start Save and Return Space,$5959 1-1 Coin Block Blitz,$595C 1-2 Coin Block Bash,$595B 1-3 Coin Shower Flower,$5956 1-4 Paddle Battle,$5955 Save and Return Space 1,$5958 2-1 Memory Match,$5957 2-2 Ground Pound,$5962 2-3 Limbo Dance,$5961 2-4 Magical Mushroom,$5964 2-5 Piranha's Pursuit,$5972 3-1 Crazy Cutter,$5971 3-2 Buried Treasure,$5974 3-3 Desrt Dash,$5973 3-4 Tug O' War,$596E 3-5 Teetering Towers,$596D Save and Return Space 2,$5970 World 4-1 to 4-3 - Entrance,$5982 World 4-4 Entrance,$5981 Save and Return Space 3,$5984 World 6-1 to 6-6 Castle Entrance,$59A2 World 8-6 to 8-1 Castle Entrance 2,$59A1 Save and Return Space 4,$59A4 9-1 Hammer Drop,$59A3 9-2 Slot Car Derby,$599E 9-3 Shell Game,$599D 9-4 Knock Block Tower,$59A0 9-5 Platform Peril,$599F Goal Space - Final Goal
-Cheat0_N=If you want to have full 255 Coins,1st use the 100 Option then put on 255. this will stop the numbers from changing  & spoiling the result.
-Cheat8_N=With this option you can calculate exactly how many you need to get on the position of your choice.
-Cheat9_N=With this option you can calculate exactly how many you need to get on the position of your choice.
-Cheat10_N=With this option you can calculate exactly how many you need to get on the position of your choice.
-Cheat11_N=With this option you can calculate exactly how many you need to get on the position of your choice.
-Cheat18_N=Select where you want to go then Enable the cheat. as soon as you enter turn the cheat back off so you can move on to the next level and not the same place.
-
-//----
-
-[9EA95858-AF72B618-C:45]
-Name=Mario Party 2 (U)
-Cheat0="Infinite Coins Main Menu",E963E326 504F
-Cheat1="Lower Right Char\Rolls 10",E8614CFF 5964
-Cheat2="Lower Right Char\Item On Pick-Up",E86326CB 59??
-Cheat3="Upper Left Char\Rolls 10",E8614B1B 5964
-Cheat4="Upper Left Char\Item On Pick-Up",E863252F 59??
-Cheat5="Upper Right Char\Rolls 10",E8614C67 5964
-Cheat6="Upper Right Char\Item On Pick-Up",E8614663 59??
-Cheat7="Lower Left Char\Rolls 10",E8614CB3 5964
-Cheat8="Lower Left Char\Item On Pick-Up",E8632697 59??
-Cheat2_O=$5A Mushroom,$59 Skeleton Key,$5C Plunder Chest,$5B Bowser Bomb,$56 Dueling Glove,$55 Warp Block,$58 Golden Mushroom,$57 Boo Bell,$62 Bowser Suit,$61 Magic Lamp
-Cheat4_O=$5A Mushroom,$59 Skeleton Key,$5C Plunder Chest,$5B Bowser Bomb,$56 Dueling Glove,$55 Warp Block,$58 Golden Mushroom,$57 Boo Bell,$62 Bowser Suit,$61 Magic Lamp
-Cheat6_O=$5A Mushroom,$59 Skeleton Key,$5C Plunder Chest,$5B Bowser Bomb,$56 Dueling Glove,$55 Warp Block,$58 Golden Mushroom,$57 Boo Bell,$62 Bowser Suit,$61 Magic Lamp
-Cheat8_O=$5A Mushroom,$59 Skeleton Key,$5C Plunder Chest,$5B Bowser Bomb,$56 Dueling Glove,$55 Warp Block,$58 Golden Mushroom,$57 Boo Bell,$62 Bowser Suit,$61 Magic Lamp
-
-//----
-
-[7C3829D9-6E8247CE-C:45]
-Name=Mario Party 3 (U)
-Cheat0="Top Left Character\Coin Options",E9616866 59??
-Cheat1="Top Left Character\Star Options",E861686A 59??
-Cheat2="Top Right Character\Coin Options",E961689E 59??
-Cheat3="Top Right Character\Star Options",E86168A2 59??
-Cheat4="Lower Left Character\Coin Options",E96168D6 59??
-Cheat5="Lower Left Character\Star Options",E86168DA 59??
-Cheat6="Lower Right Character\Coin Options",E961680E 59??
-Cheat7="Lower Right Character\Star Options",E8616812 59??
-Cheat8="Top Left Character\Dice Always",E8622E2B 59??
-Cheat9="Top Right Character\Dice Always",E8623377 59??
-Cheat10="Lower Left Character\Dice Always",E86233C3 59??
-Cheat11="Lower Right Character\Dice Always",E862330F 59??
-Cheat0_O=$5A 0 Coins,$64 10 Coins,$B6 100 Coins,$4F 255 Coins
-Cheat1_O=$5A 0 Stars,$B6 99 Stars
-Cheat2_O=$5A 0 Coins,$64 10 Coins,$B6 100 Coins,$4F 255 Coins
-Cheat3_O=$5A 0 Stars,$B6 99 Stars
-Cheat4_O=$5A 0 Coins,$64 10 Coins,$B6 100 Coins,$4F 255 Coins
-Cheat5_O=$5A 0 Stars,$B6 99 Stars
-Cheat6_O=$5A 0 Coins,$64 10 Coins,$B6 100 Coins,$4F 255 Coins
-Cheat7_O=$5A 0 Stars,$B6 99 Stars
-Cheat8_O=$5A Rolls In Random,$59 Rolls In 1,$5C Rolls In 2,$5B Rolls In 3,$56 Rolls In 4,$55 Rolls In 5,$58 Rolls In 6,$57 Rolls In 7,$62 Rolls In 8,$61 Rolls In 9,$64 Rolls In 10
-Cheat9_O=$5A Rolls In Random,$59 Rolls In 1,$5C Rolls In 2,$5B Rolls In 3,$56 Rolls In 4,$55 Rolls In 5,$58 Rolls In 6,$57 Rolls In 7,$62 Rolls In 8,$61 Rolls In 9,$64 Rolls In 10
-Cheat10_O=$5A Rolls In Random,$59 Rolls In 1,$5C Rolls In 2,$5B Rolls In 3,$56 Rolls In 4,$55 Rolls In 5,$58 Rolls In 6,$57 Rolls In 7,$62 Rolls In 8,$61 Rolls In 9,$64 Rolls In 10
-Cheat11_O=$5A Rolls In Random,$59 Rolls In 1,$5C Rolls In 2,$5B Rolls In 3,$56 Rolls In 4,$55 Rolls In 5,$58 Rolls In 6,$57 Rolls In 7,$62 Rolls In 8,$61 Rolls In 9,$64 Rolls In 10
-Cheat0_N=If you want to have full 255 Coins,1st use the 100 Option then put on 255. this will stop the numbers from changing  & spoiling the result.
-Cheat8_N=With this option you can calculate exactly how many you need to get on the position of your choice.
-Cheat9_N=With this option you can calculate exactly how many you need to get on the position of your choice.
-Cheat10_N=With this option you can calculate exactly how many you need to get on the position of your choice.
-Cheat11_N=With this option you can calculate exactly how many you need to get on the position of your choice.
-
-//----
-
 [5001CF4F-F30CB3BD-C:45]
 Name=Mario Tennis (U)
 Cheat0="Have All\Characters Available",E95CA620 504F
@@ -7941,15 +8159,8 @@ Cheat1_N="Lucky Dip is Infinite Usage Of What Ever You Get From Each Red Box"
 
 [930C29EA-939245BF-C:45]
 Name=Snowboard Kids 2 (U)
-Cheat0="All Gold Medals",50000502 0000,11259130 0101
-Cheat1="Max Coins",E979FC12 785F,E879FC11 5922
-Cheat2="Infinite\Trick Game 300 Points",E979FA46 5A7E
-Cheat3="Infinite\Tools Options",E879F97C 59??
-Cheat3_O=$59 Frying Pan,$5C Ghost,$5B Super Ghost,$56 Fan,$55 Rocket,$58 Invisible,$57 Rock,$62 Rat Face,$61 Super Rat Face,$64 Wings
-Cheat4="Infinite\Weapons Options",E879F976 59??,E879F975 5961
-Cheat4_O=$59 Slap Stick,$5C Parachute,$5B Freeze Shot,$56 Snowman,$55 Bomb,$58 Whirlwind
-Cheat5="Open Extra Characters & Snowboards",E979E8C2 5A59,E879E8C8 5959,E879E8B4 5959,E979E8B2 5A59,E979E8B8 5A59
-Cheat5_N=Battle Mode Only
+Cheat0="RECOMMENDED: Unlock All",8125916E 0101,80259170 0001,8025915C 0001,8125915E 0101,81259160 0101
+Cheat1="RECOMMENDED: Useless CPUs",8103DBCA 0000
 
 //----
 
@@ -12765,77 +12976,9 @@ Cheat5="Off-Road Tires\Player 4",50000418 0000,110F951C 0100
 Cheat6="Press F9\For Full Debug Menu",8818EE4F 0002
 Cheat6_N=Press F9 at the Press Start Menu to access the Debug Menu
 
-//----
-
-[9C663069-80F24A80-C:50]
-Name=Mario Party (E)
-Cheat0="Top Left Character\Coin Options",E8634DFF 59??
-Cheat1="Top Left Character\Star Options",E8634D04 59??
-Cheat2="Top Right Character\Coin Options",E8634D2F 59??
-Cheat3="Top Right Character\Star Options",E8634D34 59??
-Cheat4="Lower Left Character\Coin Options",E8634E5F 59??
-Cheat5="Lower Left Character\Star Options",E8634E64 59??
-Cheat6="Lower Right Character\Coin Options",E8634E8F 59??
-Cheat7="Lower Right Character\Star Options",E8634E94 59??
-Cheat8="Top Left Character\Dice Always",E86133E6 59??
-Cheat9="Top Right Character\Dice Always",E861332A 59??
-Cheat10="Lower Left Character\Dice Always",E861346E 59??
-Cheat11="Lower Right Character\Dice Always",E86134B2 59??
-Cheat12="Mini Game\Unlimited 99 lives",E86352B0 59BB
-Cheat13="Mini Game\Max 99 Coins",E86352B7 59BB
-Cheat0_O=$5A 0 Coins,$64 10 Coins,$B6 100 Coins,$4F 255 Coins
-Cheat1_O=$5A 0 Stars,$B6 99 Stars
-Cheat2_O=$5A 0 Coins,$64 10 Coins,$B6 100 Coins,$4F 255 Coins
-Cheat3_O=$5A 0 Stars,$B6 99 Stars
-Cheat4_O=$5A 0 Coins,$64 10 Coins,$B6 100 Coins,$4F 255 Coins
-Cheat5_O=$5A 0 Stars,$B6 99 Stars
-Cheat6_O=$5A 0 Coins,$64 10 Coins,$B6 100 Coins,$4F 255 Coins
-Cheat7_O=$5A 0 Stars,$B6 99 Stars
-Cheat8_O=$5A Rolls In Random,$59 Rolls In 1,$5C Rolls In 2,$5B Rolls In 3,$56 Rolls In 4,$55 Rolls In 5,$58 Rolls In 6,$57 Rolls In 7,$62 Rolls In 8,$61 Rolls In 9,$64 Rolls In 10
-Cheat9_O=$5A Rolls In Random,$59 Rolls In 1,$5C Rolls In 2,$5B Rolls In 3,$56 Rolls In 4,$55 Rolls In 5,$58 Rolls In 6,$57 Rolls In 7,$62 Rolls In 8,$61 Rolls In 9,$64 Rolls In 10
-Cheat10_O=$5A Rolls In Random,$59 Rolls In 1,$5C Rolls In 2,$5B Rolls In 3,$56 Rolls In 4,$55 Rolls In 5,$58 Rolls In 6,$57 Rolls In 7,$62 Rolls In 8,$61 Rolls In 9,$64 Rolls In 10
-Cheat11_O=$5A Rolls In Random,$59 Rolls In 1,$5C Rolls In 2,$5B Rolls In 3,$56 Rolls In 4,$55 Rolls In 5,$58 Rolls In 6,$57 Rolls In 7,$62 Rolls In 8,$61 Rolls In 9,$64 Rolls In 10
-Cheat0_N=If you want to have full 255 Coins,1st use the 100 Option then put on 255. this will stop the numbers from changing  & spoiling the result.
-Cheat8_N=With this option you can calculate exactly how many you need to get on the position of your choice.
-Cheat9_N=With this option you can calculate exactly how many you need to get on the position of your choice.
-Cheat10_N=With this option you can calculate exactly how many you need to get on the position of your choice.
-Cheat11_N=With this option you can calculate exactly how many you need to get on the position of your choice.
 
 //----
 
-[C5674160-0F5F453C-C:50]
-Name=Mario Party 3 (E)
-Cheat0="Top Left Character\Coin Options",E96162E6 59??
-Cheat1="Top Left Character\Star Options",E86162EA 59??
-Cheat2="Top Right Character\Coin Options",E961621E 59??
-Cheat3="Top Right Character\Star Options",E8616222 59??
-Cheat4="Lower Left Character\Coin Options",E9616756 59??
-Cheat5="Lower Left Character\Star Options",E861675A 59??
-Cheat6="Lower Right Character\Coin Options",E961678E 59??
-Cheat7="Lower Right Character\Star Options",E8616792 59??
-Cheat8="Top Left Character\Dice Always",E8622DAB 59??
-Cheat9="Top Right Character\Dice Always",E8622DF7 59??
-Cheat10="Lower Left Character\Dice Always",E8622D43 59??
-Cheat11="Lower Right Character\Dice Always",E8622E8F 59??
-Cheat0_O=$5A 0 Coins,$64 10 Coins,$B6 100 Coins,$4F 255 Coins
-Cheat1_O=$5A 0 Stars,$B6 99 Stars
-Cheat2_O=$5A 0 Coins,$64 10 Coins,$B6 100 Coins,$4F 255 Coins
-Cheat3_O=$5A 0 Stars,$B6 99 Stars
-Cheat4_O=$5A 0 Coins,$64 10 Coins,$B6 100 Coins,$4F 255 Coins
-Cheat5_O=$5A 0 Stars,$B6 99 Stars
-Cheat6_O=$5A 0 Coins,$64 10 Coins,$B6 100 Coins,$4F 255 Coins
-Cheat7_O=$5A 0 Stars,$B6 99 Stars
-Cheat8_O=$5A Rolls In Random,$59 Rolls In 1,$5C Rolls In 2,$5B Rolls In 3,$56 Rolls In 4,$55 Rolls In 5,$58 Rolls In 6,$57 Rolls In 7,$62 Rolls In 8,$61 Rolls In 9,$64 Rolls In 10
-Cheat9_O=$5A Rolls In Random,$59 Rolls In 1,$5C Rolls In 2,$5B Rolls In 3,$56 Rolls In 4,$55 Rolls In 5,$58 Rolls In 6,$57 Rolls In 7,$62 Rolls In 8,$61 Rolls In 9,$64 Rolls In 10
-Cheat10_O=$5A Rolls In Random,$59 Rolls In 1,$5C Rolls In 2,$5B Rolls In 3,$56 Rolls In 4,$55 Rolls In 5,$58 Rolls In 6,$57 Rolls In 7,$62 Rolls In 8,$61 Rolls In 9,$64 Rolls In 10
-Cheat11_O=$5A Rolls In Random,$59 Rolls In 1,$5C Rolls In 2,$5B Rolls In 3,$56 Rolls In 4,$55 Rolls In 5,$58 Rolls In 6,$57 Rolls In 7,$62 Rolls In 8,$61 Rolls In 9,$64 Rolls In 10
-Cheat0_N=If you want to have full 255 Coins,1st use the 100 Option then put on 255. this will stop the numbers from changing  & spoiling the result.
-Cheat8_N=With this option you can calculate exactly how many you need to get on the position of your choice.
-Cheat9_N=With this option you can calculate exactly how many you need to get on the position of your choice.
-Cheat10_N=With this option you can calculate exactly how many you need to get on the position of your choice.
-Cheat11_N=With this option you can calculate exactly how many you need to get on the position of your choice.
-
-//----
 
 [839F3AD5-406D15FA-C:50]
 Name=MarioTennis
