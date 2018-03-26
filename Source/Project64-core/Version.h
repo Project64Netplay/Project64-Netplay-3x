@@ -18,10 +18,7 @@
 
 #define VER_FILE_DESCRIPTION_STR    "Project64"
 #define VER_FILE_VERSION            VERSION_MAJOR, VERSION_MINOR, VERSION_REVISION, VERSION_BUILD
-#define VER_FILE_VERSION_STR        STRINGIZE(VERSION_MAJOR)        \
-                                    "." STRINGIZE(VERSION_MINOR)    \
-                                    "." STRINGIZE(VERSION_REVISION) \
-                                    "." STRINGIZE(VERSION_BUILD)    \
+#define VER_FILE_VERSION_STR        "MPN - 03/25/2018"
 
 #define VER_PRODUCTNAME_STR         "Project64"
 #define VER_PRODUCT_VERSION         VER_FILE_VERSION

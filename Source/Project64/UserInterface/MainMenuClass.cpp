@@ -526,7 +526,12 @@ bool CMainMenu::ProcessMessage(HWND hWnd, DWORD /*FromAccelerator*/, DWORD MenuI
     case ID_HELP_ABOUTSETTINGFILES: m_Gui->AboutIniBox(); break;
     case ID_NETPLAY_REPLACESAVES: ShellExecute(NULL, "open", "Replace.bat", NULL, NULL, SW_SHOWMAXIMIZED); break;
     case ID_NETPLAY_MPN: ShellExecute(NULL, "open", "https://discord.gg/0qi7VWGokA2Ffr4q", NULL, NULL, SW_SHOWMAXIMIZED); break;
-    case ID_NETPLAY_UPDATE_CODES: ShellExecute(NULL, "open", "UpdateCodes.bat", NULL, NULL, SW_SHOWMINIMIZED); break;
+    case ID_NETPLAY_UPDATE_EMULATOR:
+        if (!g_Settings->LoadBool(GameRunning_CPU_Running))
+	         ShellExecute(NULL, "open", "UpdateEmulator.bat", NULL, NULL, SW_SHOWMINIMIZED);
+        else
+		    g_Notify->DisplayMessage(5, "Emulator can only be updated while a game is not running.");
+	    break;
     case ID_NETPLAY_UPDATE_SAVES: ShellExecute(NULL, "open", "UpdateSaves.bat", NULL, NULL, SW_SHOWMINIMIZED); break;
     default:
         if (MenuID >= ID_RECENT_ROM_START && MenuID < ID_RECENT_ROM_END)
@@ -1227,7 +1232,7 @@ void CMainMenu::FillOutMenu(HMENU hMenu)
     NetplayMenu.push_back(MENU_ITEM(ID_NETPLAY_REPLACESAVES, MENU_REPLACESAVES));
     NetplayMenu.push_back(MENU_ITEM(ID_SYSTEM_CHEAT, MENU_CHEAT, m_ShortCuts.ShortCutString(ID_SYSTEM_CHEAT, AccessLevel)));
     NetplayMenu.push_back(MENU_ITEM(SPLITER));
-    NetplayMenu.push_back(MENU_ITEM(ID_NETPLAY_UPDATE_CODES, MENU_UPDATE_CODES));
+    NetplayMenu.push_back(MENU_ITEM(ID_NETPLAY_UPDATE_EMULATOR, MENU_UPDATE_EMULATOR));
     NetplayMenu.push_back(MENU_ITEM(ID_NETPLAY_UPDATE_SAVES, MENU_UPDATE_SAVES));
 
     /* Main Title bar Menu
