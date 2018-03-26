@@ -188,6 +188,10 @@ private:
 
     //list of function that have been called .. used in profiling
     FUNC_CALLS m_FunctionCalls;
+
+	//Mario Party Netplay
+	//Has a state already been auto-saved?
+	bool m_HasAutosaved;
     
     //Discord RPS functions and variables
 #ifdef USE_DISCORD

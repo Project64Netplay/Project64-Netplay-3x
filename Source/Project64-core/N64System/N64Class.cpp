@@ -57,6 +57,7 @@ m_SyncCount(0),
 m_thread(NULL),
 m_hPauseEvent(true),
 m_CheatsSlectionChanged(false),
+m_HasAutosaved(false),
 m_SyncCpu(SyncSystem)
 {
     WriteTrace(TraceN64System, TraceDebug, "Start");
@@ -603,7 +604,6 @@ void CN64System::getMk64Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence
     uint8_t     SpeedId = Rdram[MK64_MEM_SPEED];
     uint8_t     TrackId = Rdram[MK64_MEM_TRACK];
 
-    /* Get info on current board, MP3 has BR and Duel */
     if (MusicId > 2)
     {
         if (CupId < 5 && TrackId < 5)
@@ -653,12 +653,32 @@ void CN64System::getMp1Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence)
     bool        Error           = false;
     uint8_t     BoardId         = Rdram[MP1_MEM_BOARD];
     uint8_t     CurrentTurn     = Rdram[MP1_MEM_CURRENT_TURN];
+	uint8_t     GameState       = Rdram[MP1_MEM_GAMESTATE];
     uint8_t     TotalTurns      = Rdram[MP1_MEM_TOTAL_TURNS];
 
     if (BoardId >= 0 && BoardId < sizeof(MP1_BOARDS))
     {
         Board = MP1_BOARDS[BoardId];
         BoardThumbnail = MP1_BOARDS_THUMB[BoardId];
+
+		switch (GameState)
+		{
+		case 0x61:
+		case 0x66:
+		case 0x67:
+		case 0x69:
+		case 0x6a:
+		case 0x6b:
+		case 0x6c:
+		case 0x6d:
+		case 0x6e:
+		case 0x81:
+			Error = true;
+			break;
+		default:
+			if (CurrentTurn > TotalTurns + 1 || TotalTurns == 0 || CurrentTurn == 0)
+				Error = true;
+		}
     }
     else Error = true;
 
@@ -679,8 +699,12 @@ void CN64System::getMp1Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence)
 
     discordPresence.details = RpsResult;
 
-    //if (GameState != 0 && GameState < 72)
-    //    discordPresence.state = MP3_MINIS[GameState];
+	if (GameState == 0x42 && !m_HasAutosaved)
+	{
+		SaveState();
+		m_HasAutosaved = true;
+	}
+
     if (Error)
         discordPresence.state = "Setting up...";
     else
@@ -709,6 +733,21 @@ void CN64System::getMp2Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence)
     {
         Board = MP2_BOARDS[BoardId];
         BoardThumbnail = MP2_BOARDS_THUMB[BoardId];
+
+		switch (GameState)
+		{
+		case 0x55:
+		case 0x57:
+		case 0x58:
+		case 0x5b:
+		case 0x5c:
+		case 0x62:
+			Error = true;
+			break;
+		default:
+			if (CurrentTurn > TotalTurns + 1 || TotalTurns == 0 || CurrentTurn == 0)
+				Error = true;
+		}
     }
     else Error = true;
 
@@ -729,8 +768,12 @@ void CN64System::getMp2Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence)
 
     discordPresence.details = RpsResult;
 
-    //if (GameState != 0 && GameState < 72)
-    //    discordPresence.state = MP3_MINIS[GameState];
+	if (GameState == 0x52 && !m_HasAutosaved)
+	{
+		SaveState();
+		m_HasAutosaved = true;
+	}
+
     if (Error)
         discordPresence.state = "Setting up...";
     else
@@ -759,19 +802,34 @@ void CN64System::getMp3Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence)
     /* Get info on current board, MP3 has BR and Duel */
     if (BoardId >= 0 && BoardId < sizeof(MP3_BOARDS))
     {
-        if (GameType == 1 || GameType == 5)
-        {
-            Board = MP3_BOARDS[BoardId];
-            BoardThumbnail = MP3_BOARDS_THUMB[BoardId];
-            MaxPlayers = 4;
-        }
-        else if (GameType == 2 || GameType == 6)
-        {
-            Board = MP3_BOARDS_DUEL[BoardId];
-            BoardThumbnail = MP3_BOARDS_DUEL_THUMB[BoardId];
-            MaxPlayers = 2;
-        }
-        else Error = true;
+		switch (GameState)
+		{
+		case 0x55:
+		case 0x77:
+		case 0x78:
+		case 0x79:
+		case 0x7a:
+		case 0x7b:
+			Error = true;
+			break;
+		default:
+			if (GameType == 1 || GameType == 5)
+			{
+				Board = MP3_BOARDS[BoardId];
+				BoardThumbnail = MP3_BOARDS_THUMB[BoardId];
+				MaxPlayers = 4;
+			}
+			else if (GameType == 2 || GameType == 6)
+			{
+				Board = MP3_BOARDS_DUEL[BoardId];
+				BoardThumbnail = MP3_BOARDS_DUEL_THUMB[BoardId];
+				MaxPlayers = 2;
+			}
+			else Error = true;
+
+			if (CurrentTurn > TotalTurns + 1 || TotalTurns == 0 || CurrentTurn == 0)
+				Error = true;
+		}
     }
     else Error = true;
 
@@ -792,9 +850,15 @@ void CN64System::getMp3Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence)
 
     discordPresence.details = RpsResult;
 
-    if (GameState != 0 && GameState < sizeof(MP3_MINIS)/4)
-        discordPresence.state = MP3_MINIS[GameState];
-    else if ((Error) || GameState > 118)
+	if (GameState == 0x4f && !m_HasAutosaved)
+	{
+		SaveState();
+		m_HasAutosaved = true;
+	}
+
+    //if (GameState != 0 && GameState < sizeof(MP3_MINIS)/4)
+    //    discordPresence.state = MP3_MINIS[GameState];
+    if ((Error) || GameState > 118)
         discordPresence.state = "Setting up...";
     else
         discordPresence.state = Board;
@@ -933,7 +997,7 @@ void CN64System::discordUpdate()
                         *FirstIdentifier = '\0';
                 }
                 else
-                    snprintf(PlayedRom, sizeof(PlayedRom), "%s", g_Settings->LoadStringVal(Game_GameName).c_str());
+                    snprintf(PlayedRom, sizeof(PlayedRom), "%s", "Unknown game");
                 discordPresence.state = PlayedRom;
 
                 discordPresence.largeImageKey = "default-pj64";
