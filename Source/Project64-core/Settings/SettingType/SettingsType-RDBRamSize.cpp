@@ -36,18 +36,8 @@ bool CSettingTypeRDBRDRamSize::Load ( int /*Index*/, bool & /*Value*/ ) const
 
 bool CSettingTypeRDBRDRamSize::Load ( int Index, uint32_t & Value ) const
 {
-    uint32_t ulValue;
-    bool bRes = m_SettingsIniFile->GetNumber(m_SectionIdent->c_str(),m_KeyName.c_str(),m_DefaultValue,ulValue);
-    if (!bRes)
-    {
-        LoadDefault(Index,ulValue);
-    }
-    Value = 0x400000;
-    if (ulValue == 8)
-    {
-        Value = 0x800000;
-    }
-    return bRes;
+    Value = 0x800000; //MPN - Always use Expansion Pak
+    return true;
 }
 
 bool CSettingTypeRDBRDRamSize::Load ( int /*Index*/, stdstr & /*Value*/ ) const
