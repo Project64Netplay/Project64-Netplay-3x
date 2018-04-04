@@ -682,37 +682,45 @@ void CN64System::getMp1Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence)
     }
     else Error = true;
 
-    char RpsResult[128];
-    if (BoardId == 10) //Mini-Game Island
-        snprintf(RpsResult, sizeof(RpsResult), "Story Mode"); //TODO
-    else
-        snprintf(
-            RpsResult,
-            sizeof(RpsResult),
-            "Players: %d/4 Turn: %d/%d",
-            m_DiscordCurrentPlayers,
-            CurrentTurn,
-            TotalTurns
-        );
-
-    RpsResult[sizeof(RpsResult) - 1] = 0;
-
-    discordPresence.details = RpsResult;
-
 	if (GameState == 0x42 && !m_HasAutosaved)
 	{
 		SaveState();
 		m_HasAutosaved = true;
 	}
 
+	char RpsResult[128];
     if (Error)
-        discordPresence.state = "Setting up...";
-    else
-        discordPresence.state = Board;
+	{
+		discordPresence.state = "Setting up...";
+		discordPresence.smallImageKey = NULL;
+		snprintf(
+			RpsResult,
+			sizeof(RpsResult),
+			"Players: %d/4",
+			m_DiscordCurrentPlayers
+		);
+	}
+	else
+	{
+		discordPresence.state = Board;
+		discordPresence.smallImageKey = BoardThumbnail;
+		if (BoardId == 10) //Mini-Game Island
+			snprintf(RpsResult, sizeof(RpsResult), "Story Mode"); //TODO
+		else
+			snprintf(
+				RpsResult,
+				sizeof(RpsResult),
+				"Players: %d/4 Turn: %d/%d",
+				m_DiscordCurrentPlayers,
+				CurrentTurn,
+				TotalTurns
+			);
+	}
 
+	RpsResult[sizeof(RpsResult) - 1] = 0;
+	discordPresence.details = RpsResult;
     discordPresence.largeImageKey = "box-mp1";
     discordPresence.largeImageText = "Mario Party";
-    discordPresence.smallImageKey = BoardThumbnail;
     discordPresence.smallImageText = Board;
 
     Discord_UpdatePresence(&discordPresence);
@@ -751,37 +759,45 @@ void CN64System::getMp2Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence)
     }
     else Error = true;
 
-    char RpsResult[128];
-    if (BoardId == 7) //Mini-Game Coaster
-        snprintf(RpsResult, sizeof(RpsResult), "Story Mode"); //TODO
-    else
-        snprintf(
-            RpsResult,
-            sizeof(RpsResult),
-            "Players: %d/4 Turn: %d/%d",
-            m_DiscordCurrentPlayers,
-            CurrentTurn,
-            TotalTurns
-        );
-
-    RpsResult[sizeof(RpsResult) - 1] = 0;
-
-    discordPresence.details = RpsResult;
-
 	if (GameState == 0x52 && !m_HasAutosaved)
 	{
 		SaveState();
 		m_HasAutosaved = true;
 	}
 
+	char RpsResult[128];
     if (Error)
-        discordPresence.state = "Setting up...";
-    else
-        discordPresence.state = Board;
+	{
+		discordPresence.state = "Setting up...";
+		discordPresence.smallImageKey = NULL;
+		snprintf(
+			RpsResult,
+			sizeof(RpsResult),
+			"Players: %d/4",
+			m_DiscordCurrentPlayers
+		);
+	}
+	else
+	{
+		if (BoardId == 7) //Mini-Game Coaster
+			snprintf(RpsResult, sizeof(RpsResult), "Story Mode"); //TODO
+		else
+			snprintf(
+				RpsResult,
+				sizeof(RpsResult),
+				"Players: %d/4 Turn: %d/%d",
+				m_DiscordCurrentPlayers,
+				CurrentTurn,
+				TotalTurns
+			);
+		discordPresence.state = Board;
+		discordPresence.smallImageKey = BoardThumbnail;
+	}
 
+	RpsResult[sizeof(RpsResult) - 1] = 0;
+	discordPresence.details = RpsResult;
     discordPresence.largeImageKey   = "box-mp2";
     discordPresence.largeImageText  = "Mario Party 2";
-    discordPresence.smallImageKey   = BoardThumbnail;
     discordPresence.smallImageText  = Board;
 
     Discord_UpdatePresence(&discordPresence);
@@ -833,23 +849,6 @@ void CN64System::getMp3Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence)
     }
     else Error = true;
 
-    char RpsResult[128];
-    if (GameType == 5 || GameType == 6)
-        snprintf(RpsResult, sizeof(RpsResult), "Story Mode"); //TODO
-    else
-        snprintf(
-            RpsResult, 
-            sizeof(RpsResult), 
-            "Players: %d/%d Turn: %d/%d", 
-            m_DiscordCurrentPlayers,
-            MaxPlayers,
-            CurrentTurn, 
-            TotalTurns
-        );
-    RpsResult[sizeof(RpsResult) - 1] = 0;
-
-    discordPresence.details = RpsResult;
-
 	if (GameState == 0x4f && !m_HasAutosaved)
 	{
 		SaveState();
@@ -858,14 +857,41 @@ void CN64System::getMp3Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence)
 
     //if (GameState != 0 && GameState < sizeof(MP3_MINIS)/4)
     //    discordPresence.state = MP3_MINIS[GameState];
-    if ((Error) || GameState > 118)
-        discordPresence.state = "Setting up...";
-    else
-        discordPresence.state = Board;
+	char RpsResult[128];
+	if ((Error) || GameState > 118)
+	{
+		discordPresence.state = "Setting up...";
+		discordPresence.smallImageKey = NULL;
+		snprintf(
+			RpsResult,
+			sizeof(RpsResult),
+			"Players: %d/%d",
+			m_DiscordCurrentPlayers,
+			MaxPlayers
+		);
+	}
+	else
+	{
+		discordPresence.state = Board;
+		discordPresence.smallImageKey = BoardThumbnail;
+		if (GameType == 5 || GameType == 6)
+			snprintf(RpsResult, sizeof(RpsResult), "Story Mode"); //TODO
+		else
+			snprintf(
+				RpsResult,
+				sizeof(RpsResult),
+				"Players: %d/%d Turn: %d/%d",
+				m_DiscordCurrentPlayers,
+				MaxPlayers,
+				CurrentTurn,
+				TotalTurns
+			);
+	}
 
+	RpsResult[sizeof(RpsResult) - 1] = 0;
+	discordPresence.details = RpsResult;
     discordPresence.largeImageKey = "box-mp3";
     discordPresence.largeImageText = "Mario Party 3";
-    discordPresence.smallImageKey = BoardThumbnail;
     discordPresence.smallImageText = Board;
 
     Discord_UpdatePresence(&discordPresence);
