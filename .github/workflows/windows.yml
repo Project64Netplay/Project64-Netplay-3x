@@ -35,4 +35,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: PJ64Netplay-dev
-        path: D:\a\project64-mpn-src\project64-mpn-src\Package\
+        path: D:\a\project64-mpn-src\project64-mpn-src\Bin\
