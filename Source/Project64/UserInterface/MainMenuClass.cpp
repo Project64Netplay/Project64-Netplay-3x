@@ -524,19 +524,9 @@ bool CMainMenu::ProcessMessage(HWND hWnd, DWORD /*FromAccelerator*/, DWORD MenuI
     case ID_HELP_HOMEPAGE: ShellExecute(NULL, "open", "http://www.pj64-emu.com", NULL, NULL, SW_SHOWMAXIMIZED); break;
     case ID_HELP_ABOUT: m_Gui->AboutBox(); break;
     case ID_HELP_ABOUTSETTINGFILES: m_Gui->AboutIniBox(); break;
-    case ID_NETPLAY_REPLACESAVES:
-        if (!g_Settings->LoadBool(GameRunning_CPU_Running))
-            ShellExecute(NULL, "open", "Replace.bat", NULL, NULL, SW_SHOWMINIMIZED);
-        else
-            g_Notify->DisplayMessage(5, "Saves can only be replaced when a game is not running.");
-        break;
-    case ID_NETPLAY_MPN: ShellExecute(NULL, "open", "https://discord.gg/marioparty", NULL, NULL, SW_SHOWMAXIMIZED); break;
-    case ID_NETPLAY_UPDATE_EMULATOR:
-        if (!g_Settings->LoadBool(GameRunning_CPU_Running))
-	         ShellExecute(NULL, "open", "UpdateEmulator.bat", NULL, NULL, SW_SHOWMINIMIZED);
-        else
-		    g_Notify->DisplayMessage(5, "Emulator can only be updated while a game is not running.");
-	    break;
+    case ID_NETPLAY_REPLACESAVES: ShellExecute(NULL, "open", "Replace.bat", NULL, NULL, SW_SHOWDEFAULT);
+    case ID_NETPLAY_MPN: ShellExecute(NULL, "open", "https://discord.gg/marioparty", NULL, NULL, SW_SHOWDEFAULT); break;
+    case ID_NETPLAY_UPDATE_EMULATOR: ShellExecute(NULL, "open", "UpdateEmulator.bat", NULL, NULL, SW_SHOWDEFAULT);
     case ID_NETPLAY_UPDATE_SAVES: ShellExecute(NULL, "open", "UpdateSaves.bat", NULL, NULL, SW_SHOWMINIMIZED); break;
     default:
         if (MenuID >= ID_RECENT_ROM_START && MenuID < ID_RECENT_ROM_END)
