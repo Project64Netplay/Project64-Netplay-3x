@@ -119,7 +119,6 @@ void CLanguage::LoadDefaultStrings(void)
     DEF_STR(MENU_MPN, "Mario Party Netplay &Discord");
     DEF_STR(MENU_REPLACESAVES, "&Replace Save Files");
     DEF_STR(MENU_UPDATE_EMULATOR, "Update &Emulator...");
-    DEF_STR(MENU_UPDATE_SAVES, "Update &Save Files...");
 
     //Current Save Slot menu
     DEF_STR(MENU_SLOT_DEFAULT, "Default");

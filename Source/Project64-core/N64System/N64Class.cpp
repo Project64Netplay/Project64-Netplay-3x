@@ -858,8 +858,8 @@ void CN64System::getMp3Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence)
 		m_HasAutosaved = true;
 	}
 
-    //if (GameState != 0 && GameState < sizeof(MP3_MINIS)/4)
-    //    discordPresence.state = MP3_MINIS[GameState];
+    if (GameState != 0 && GameState < sizeof(MP3_MINIS)/4)
+        discordPresence.state = MP3_MINIS[GameState];
 	char RpsResult[128];
 	if ((Error) || GameState > 118)
 	{
@@ -971,7 +971,7 @@ void CN64System::getNumberControllers()
 
 void CN64System::discordInit()
 {
-    m_DiscordApplicationId  = "410763041278525440";
+    m_DiscordApplicationId  = "888655408623943731";
     m_DiscordCurrentPlayers = 0;
     m_DiscordNextPost       = time(0);
     m_DiscordSendPresence   = true;

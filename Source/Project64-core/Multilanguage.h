@@ -112,7 +112,6 @@ enum LanguageStringID
     MENU_REPLACESAVES = 4001,
     MENU_MPN = 4002,
     MENU_UPDATE_EMULATOR = 4003,
-    MENU_UPDATE_SAVES = 4004,
 
     //Current Save Slot menu
     MENU_SLOT_DEFAULT = 190,

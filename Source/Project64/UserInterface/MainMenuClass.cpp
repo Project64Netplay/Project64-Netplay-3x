@@ -527,7 +527,6 @@ bool CMainMenu::ProcessMessage(HWND hWnd, DWORD /*FromAccelerator*/, DWORD MenuI
     case ID_NETPLAY_REPLACESAVES: ShellExecute(NULL, "open", "Replace.bat", NULL, NULL, SW_SHOWDEFAULT); break;
     case ID_NETPLAY_MPN: ShellExecute(NULL, "open", "https://discord.gg/marioparty", NULL, NULL, SW_SHOWDEFAULT); break;
     case ID_NETPLAY_UPDATE_EMULATOR: ShellExecute(NULL, "open", "UpdateEmulator.bat", NULL, NULL, SW_SHOWDEFAULT);
-    case ID_NETPLAY_UPDATE_SAVES: ShellExecute(NULL, "open", "UpdateSaves.bat", NULL, NULL, SW_SHOWMINIMIZED); break;
     default:
         if (MenuID >= ID_RECENT_ROM_START && MenuID < ID_RECENT_ROM_END)
         {
@@ -1228,7 +1227,6 @@ void CMainMenu::FillOutMenu(HMENU hMenu)
     NetplayMenu.push_back(MENU_ITEM(ID_SYSTEM_CHEAT, MENU_CHEAT, m_ShortCuts.ShortCutString(ID_SYSTEM_CHEAT, AccessLevel)));
     NetplayMenu.push_back(MENU_ITEM(SPLITER));
     NetplayMenu.push_back(MENU_ITEM(ID_NETPLAY_UPDATE_EMULATOR, MENU_UPDATE_EMULATOR));
-    NetplayMenu.push_back(MENU_ITEM(ID_NETPLAY_UPDATE_SAVES, MENU_UPDATE_SAVES));
 
     /* Main Title bar Menu
     ***********************/
