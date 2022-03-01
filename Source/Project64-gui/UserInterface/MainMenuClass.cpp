@@ -940,9 +940,10 @@ void CMainMenu::FillOutMenu(HMENU hMenu)
     {
         Item.SetItemEnabled(false);
     }
-    OptionMenu.push_back(MENU_ITEM(ID_SYSTEM_CHEAT, MENU_CHEAT, m_ShortCuts.ShortCutString(ID_SYSTEM_CHEAT, AccessLevel)));
     OptionMenu.push_back(Item);
 
+    OptionMenu.push_back(MENU_ITEM(SPLITER));
+    OptionMenu.push_back(MENU_ITEM(ID_SYSTEM_CHEAT, MENU_CHEAT, m_ShortCuts.ShortCutString(ID_SYSTEM_CHEAT, AccessLevel)));
     OptionMenu.push_back(MENU_ITEM(SPLITER));
     if (!inBasicMode)
     {
