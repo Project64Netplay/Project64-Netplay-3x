@@ -96,6 +96,8 @@ enum SettingID
     Rdb_AudioResetOnLoad,
     Rdb_AllowROMWrites,
     Rdb_CRC_Recalc,
+	Rdb_RPCKey,
+
 
     //Individual Game Settings
     Game_IniKey,
@@ -148,6 +150,7 @@ enum SettingID
     Game_CRC_Recalc,
     Game_Transferpak_ROM,
     Game_Transferpak_Sav,
+	Game_RPCKey,
 
     // General Game running info
     GameRunning_LoadingInProgress,

@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{1e3eb4f7-a0b1-4d09-9e50-b5c699f24050}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Plugin">
+      <UniqueIdentifier>{242ae4a5-b150-44e6-b31c-027acd6d38b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Settings">
+      <UniqueIdentifier>{60e2fd87-7b6b-4147-82fe-e12516efe43c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{7b81a6a8-b20b-464e-8184-864886bb00fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Settings">
+      <UniqueIdentifier>{8eaf5c00-c88d-418e-a27c-d658c547ab79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Debugger">
+      <UniqueIdentifier>{89244064-68f5-44d9-9021-7a592d910e43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\WTL Controls">
+      <UniqueIdentifier>{19f68e68-7068-4a3c-a11d-c3ff48fe78b2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="UserInterface\WTLControls\ModifiedEditBox.cpp">
+      <Filter>UI\WTL Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface\WTLControls\PartialGroupBox.cpp">
+      <Filter>UI\WTL Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Plugins\PluginList.cpp">
+      <Filter>Plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface\CheatClassUI.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface\GuiClass.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface\LoggingUI.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface\MainMenuClass.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface\MenuClass.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface\MenuShortCuts.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface\NotificationClass.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface\RomBrowserClass.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface\SettingsConfig.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="N64System\Debugger\Debugger.cpp">
+      <Filter>UI\Debugger</Filter>
+    </ClCompile>
+    <ClCompile Include="N64System\Debugger\Debugger-MemoryDump.cpp">
+      <Filter>UI\Debugger</Filter>
+    </ClCompile>
+    <ClCompile Include="N64System\Debugger\Debugger-MemorySearch.cpp">
+      <Filter>UI\Debugger</Filter>
+    </ClCompile>
+    <ClCompile Include="N64System\Debugger\Debugger-TLB.cpp">
+      <Filter>UI\Debugger</Filter>
+    </ClCompile>
+    <ClCompile Include="N64System\Debugger\Debugger-ViewMemory.cpp">
+      <Filter>UI\Debugger</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings\GuiSettings.cpp">
+      <Filter>Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings\NotificationSettings.cpp">
+      <Filter>Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface\RomInformationClass.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings\UISettings.cpp">
+      <Filter>Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface\Discord.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="UserInterface\Settings\SettingsPage.cpp">
+      <Filter>UI\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface\Settings\SettingsPage-AdvancedOptions.cpp">
+      <Filter>UI\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface\Settings\SettingsPage-Directories.cpp">
+      <Filter>UI\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface\Settings\SettingsPage-GameBrowser.cpp">
+      <Filter>UI\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface\Settings\SettingsPage-Game-General.cpp">
+      <Filter>UI\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface\Settings\SettingsPage-Game-Plugin.cpp">
+      <Filter>UI\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface\Settings\SettingsPage-Game-Recompiler.cpp">
+      <Filter>UI\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface\Settings\SettingsPage-Game-Status.cpp">
+      <Filter>UI\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface\Settings\SettingsPage-KeyboardShortcuts.cpp">
+      <Filter>UI\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface\Settings\SettingsPage-Options.cpp">
+      <Filter>UI\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface\Settings\SettingsPage-Plugin.cpp">
+      <Filter>UI\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="Multilanguage\LanguageSelector.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="UserInterface\resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings\GuiSettings.h">
+      <Filter>UI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings\NotificationSettings.h">
+      <Filter>UI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings\UISettings.h">
+      <Filter>UI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\CheatClassUI.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\Discord.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\GuiClass.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Multilanguage\LanguageSelector.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\LoggingUI.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\MainMenuClass.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\MenuClass.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\MenuShortCuts.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="N64System.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\NotificationClass.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\RomBrowser.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\RomInformationClass.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\SettingsConfig.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Support.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="WTLApp.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="N64System\Debugger\DebugDialog.h">
+      <Filter>UI\Debugger</Filter>
+    </ClInclude>
+    <ClInclude Include="N64System\Debugger\debugger.h">
+      <Filter>UI\Debugger</Filter>
+    </ClInclude>
+    <ClInclude Include="N64System\Debugger\Debugger-MemoryDump.h">
+      <Filter>UI\Debugger</Filter>
+    </ClInclude>
+    <ClInclude Include="N64System\Debugger\Debugger-MemorySearch.h">
+      <Filter>UI\Debugger</Filter>
+    </ClInclude>
+    <ClInclude Include="N64System\Debugger\Debugger-TLB.h">
+      <Filter>UI\Debugger</Filter>
+    </ClInclude>
+    <ClInclude Include="N64System\Debugger\DebuggerUI.h">
+      <Filter>UI\Debugger</Filter>
+    </ClInclude>
+    <ClInclude Include="N64System\Debugger\Debugger-ViewMemory.h">
+      <Filter>UI\Debugger</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\WTLControls\ModifiedCheckBox.h">
+      <Filter>UI\WTL Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\WTLControls\ModifiedComboBox.h">
+      <Filter>UI\WTL Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\WTLControls\ModifiedEditBox.h">
+      <Filter>UI\WTL Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\WTLControls\numberctrl.h">
+      <Filter>UI\WTL Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\WTLControls\PartialGroupBox.h">
+      <Filter>UI\WTL Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\Settings\SettingsPage.h">
+      <Filter>UI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\Settings\SettingsPage-AdvancedOptions.h">
+      <Filter>UI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\Settings\SettingsPage-Directories.h">
+      <Filter>UI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\Settings\SettingsPage-GameBrowser.h">
+      <Filter>UI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\Settings\SettingsPage-Game-General.h">
+      <Filter>UI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\Settings\SettingsPage-Game-Plugin.h">
+      <Filter>UI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\Settings\SettingsPage-Game-Recompiler.h">
+      <Filter>UI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\Settings\SettingsPage-Game-Status.h">
+      <Filter>UI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\Settings\SettingsPage-KeyboardShortcuts.h">
+      <Filter>UI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\Settings\SettingsPage-Options.h">
+      <Filter>UI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface\Settings\SettingsPage-Plugin.h">
+      <Filter>UI\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Project64-core\Version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\divider.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\hand.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="UserInterface\Icons\divider.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="UserInterface\Icons\hand.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\ListItems.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="UserInterface\Icons\PJ64.ICO">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="UserInterface\Icons\right.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="UserInterface\Icons\left.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="UserInterface\Bitmaps\tri-state.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="UserInterface\Bitmaps\ListItems.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="UserInterface\Bitmaps\AboutScreenLogo.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="UserInterface\UIResources.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="Project64.exe.manifest" />
+  </ItemGroup>
+</Project>

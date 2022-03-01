@@ -36,8 +36,8 @@ bool CSettingTypeRDBRDRamSize::Load ( int /*Index*/, bool & /*Value*/ ) const
 
 bool CSettingTypeRDBRDRamSize::Load ( int Index, uint32_t & Value ) const
 {
-    Value = 0x800000; //MPN - Always use Expansion Pak
-    return true;
+	Value = 0x800000; //MPN - Always use Expansion Pak
+	return true;
 }
 
 bool CSettingTypeRDBRDRamSize::Load ( int /*Index*/, stdstr & /*Value*/ ) const

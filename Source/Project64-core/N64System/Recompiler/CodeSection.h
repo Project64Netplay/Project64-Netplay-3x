@@ -12,6 +12,10 @@
 #include "JumpInfo.h"
 #include <Project64-core/N64System/Recompiler/RecompilerOps.h>
 
+//x64Bit-Compiler
+#include <Project64-core/Settings/DebugSettings.h>
+
+
 class CCodeBlock;
 
 class CCodeSection

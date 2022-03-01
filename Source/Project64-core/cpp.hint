@@ -1,0 +1,7 @@
+// Hint files help the Visual Studio IDE interpret Visual C++ identifiers
+// such as names of functions and macros.
+// For more information see https://go.microsoft.com/fwlink/?linkid=865984
+#define WriteTrace(m, s, format, __VA_ARGS__) if (g_ModuleLogLevel != NULL && g_ModuleLogLevel[(m)] >= (s)) { WriteTraceFull((m), (s), __FILE__, __LINE__, __FUNCTION__, (format),##__VA_ARGS__); }
+#define WriteTrace(m, s, format, __VA_ARGS__) if (g_ModuleLogLevel != NULL && g_ModuleLogLevel[(m)] >= (s)) { WriteTraceFull((m), (s), __FILE__, __LINE__, __PRETTY_FUNCTION__, (format),##__VA_ARGS__); }
+#define WriteTrace(m, s, format, __VA_ARGS__) if(g_ModuleLogLevel[(m)] >= (s)) { WriteTraceFull((m), (s), __FILE__, __LINE__, __FUNCTION__, (format),##__VA_ARGS__); }
+#define WriteTrace(m, s, format, __VA_ARGS__) if(g_ModuleLogLevel[(m)] >= (s)) { WriteTraceFull((m), (s), __FILE__, __LINE__, __PRETTY_FUNCTION__, (format),##__VA_ARGS__); }

@@ -1,0 +1,45 @@
+/*
+ *  This file is part of WinSparkle (https://winsparkle.org)
+ *
+ *  This example code is public domain.
+ *
+ */
+
+appicon ICON "appicon.ico"
+
+#include <winver.h>
+
+// Get updates from this appcast feed:
+FeedURL     APPCAST     {"https://winsparkle.org/example/appcast.xml"}
+
+// Version information; this, too, is used by WinSparkle
+1 VERSIONINFO
+ FILEVERSION     11,13,20,20
+ PRODUCTVERSION  11,13,20,20
+ FILEFLAGSMASK   VS_FFI_FILEFLAGSMASK
+ FILEFLAGS       0
+ FILEOS          VOS_NT_WINDOWS32
+ FILETYPE        VFT_APP
+ FILESUBTYPE     VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0" // US English, Unicode
+        BEGIN
+            VALUE "Comments", "Project64 Netplay."
+            VALUE "CompanyName", "http://cdn.crankysupertoon.live/dist/pj64netplay/update.xml\0"
+            VALUE "FileDescription", "Project64 Netplay\0"
+            VALUE "FileVersion", "11.13.20.20\0"
+            VALUE "InternalName", "pj64netplay\0"
+            VALUE "OriginalFilename", "Project64 Netplay.exe\0"
+            VALUE "LegalCopyright", "GPL2\0"
+            VALUE "ProductName", "Project64 Netplay\0"
+            VALUE "ProductVersion", "11.13.20.20\0"
+        END
+    END
+
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 0x04B0
+    END
+END

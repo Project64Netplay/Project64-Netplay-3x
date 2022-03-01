@@ -1,12 +1,10 @@
-#ifndef MARIO_PARTY_NETPLAY
-#define MARIO_PARTY_NETPLAY
 #pragma once
 
-const uint32_t MP1_MEM_BOARD        = 0x0ED5C0;
+const uint32_t MP1_MEM_BOARD = 0x0ED5C0;
 const uint32_t MP1_MEM_CURRENT_TURN = 0x0ED5CA;
-const uint32_t MP1_MEM_GAMESTATE    = 0x0F09F4;
-const uint32_t MP1_MEM_GAMETYPE     = 0;
-const uint32_t MP1_MEM_TOTAL_TURNS  = 0x0ED5C4;
+const uint32_t MP1_MEM_GAMESTATE = 0x0F09F4;
+const uint32_t MP1_MEM_GAMETYPE = 0;
+const uint32_t MP1_MEM_TOTAL_TURNS = 0x0ED5C4;
 
 static const char* MP1_BOARDS[11] =
 {
@@ -43,13 +41,13 @@ static const char* MP1_MINIS[1] =
     "Nothing"
 };
 
-const uint32_t MP2_MEM_BOARD        = 0x0F93A8;
+const uint32_t MP2_MEM_BOARD = 0x0F93A8;
 const uint32_t MP2_MEM_CURRENT_TURN = 0x0F93B2;
-const uint32_t MP2_MEM_GAMESTATE    = 0x0FA63C;
-const uint32_t MP2_MEM_GAMETYPE     = 0;
-const uint32_t MP2_MEM_TOTAL_TURNS  = 0x0F93AC;
+const uint32_t MP2_MEM_GAMESTATE = 0x0FA63C;
+const uint32_t MP2_MEM_GAMETYPE = 0;
+const uint32_t MP2_MEM_TOTAL_TURNS = 0x0F93AC;
 
-static const char* MP2_BOARDS[9] = 
+static const char* MP2_BOARDS[9] =
 {
     "Western Land",
     "Pirate Land",
@@ -80,11 +78,11 @@ static const char* MP2_MINIS[1] =
     "Nothing"
 };
 
-const uint32_t MP3_MEM_BOARD        = 0x0CD05A;
+const uint32_t MP3_MEM_BOARD = 0x0CD05A;
 const uint32_t MP3_MEM_CURRENT_TURN = 0x0CD058;
-const uint32_t MP3_MEM_GAMESTATE    = 0x0CE200;
-const uint32_t MP3_MEM_GAMETYPE     = 0x0CD05B;
-const uint32_t MP3_MEM_TOTAL_TURNS  = 0x0CD059;
+const uint32_t MP3_MEM_GAMESTATE = 0x0CE200;
+const uint32_t MP3_MEM_GAMETYPE = 0x0CD05B;
+const uint32_t MP3_MEM_TOTAL_TURNS = 0x0CD059;
 
 static const char* MP3_BOARDS[7] =
 {
@@ -222,7 +220,7 @@ static const char* MP_CHARACTERS[8] =
 const uint32_t MK64_MEM_MUSIC = 0x0ea15e;
 const uint32_t MK64_MEM_SPEED = 0x0dc548;
 const uint32_t MK64_MEM_TRACK = 0x18ee08;
-const uint32_t MK64_MEM_CUP   = 0x18ee0a;
+const uint32_t MK64_MEM_CUP = 0x18ee0a;
 
 static const char* MK64_SPEEDS[5] =
 {
@@ -257,9 +255,9 @@ static const char* MK64_TRACKS[20] =
     "Skyscraper"
 };
 
-const uint32_t SSB_MEM_PLAYER        = 0x0a4d28;
+const uint32_t SSB_MEM_PLAYER = 0x0a4d28;
 const uint8_t  SSB_MEM_PLAYER_OFFSET = 0x74;
-const uint32_t SSB_MEM_STAGE         = 0x0a4d0a;
+const uint32_t SSB_MEM_STAGE = 0x0a4d0a;
 
 static const char* SSB_CHARACTERS[12] =
 {
@@ -302,5 +300,3 @@ static const char* SSB_STAGES_THUMB[9] =
     "ssb-pokemon",
     "ssb-mario2"
 };
-
-#endif

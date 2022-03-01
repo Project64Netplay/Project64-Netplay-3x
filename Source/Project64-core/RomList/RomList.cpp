@@ -467,8 +467,8 @@ void CRomList::FillRomExtensionInfo(ROM_INFO * pRomInfo)
     pRomInfo->Players = 1;
     pRomInfo->CoreNotes[0] = '\0';
     pRomInfo->PluginNotes[0] = '\0';
-    strcpy(pRomInfo->GoodName, "#340#");
-    strcpy(pRomInfo->Status, "Unknown");
+	strcpy(pRomInfo->GoodName, "#301#");
+	strcpy(pRomInfo->Status, "Unknown");
 
     //Get File Identifier
     char Identifier[100];
@@ -487,8 +487,12 @@ void CRomList::FillRomExtensionInfo(ROM_INFO * pRomInfo)
     //Rom Settings
     strncpy(pRomInfo->GoodName, m_RomIniFile->GetString(Identifier, "Good Name", pRomInfo->GoodName).c_str(), sizeof(pRomInfo->GoodName) / sizeof(char));
     strncpy(pRomInfo->Status, m_RomIniFile->GetString(Identifier, "Status", pRomInfo->Status).c_str(), sizeof(pRomInfo->Status) / sizeof(char));
-    strncpy(pRomInfo->CoreNotes, m_RomIniFile->GetString(Identifier, "Core Note", "").c_str(), sizeof(pRomInfo->CoreNotes) / sizeof(char));
-    strncpy(pRomInfo->PluginNotes, m_RomIniFile->GetString(Identifier, "Plugin Note", "").c_str(), sizeof(pRomInfo->PluginNotes) / sizeof(char));
+	if (strcmp("#301#", pRomInfo->GoodName) != 0) {
+		strncpy(pRomInfo->CoreNotes, m_RomIniFile->GetString(Identifier, "Core Note", "").c_str(), sizeof(pRomInfo->CoreNotes) / sizeof(char));
+	}
+	else {
+		strncpy(pRomInfo->CoreNotes, m_RomIniFile->GetString(Identifier, "Core Note", "#340#").c_str(), sizeof(pRomInfo->CoreNotes) / sizeof(char));
+	}    strncpy(pRomInfo->PluginNotes, m_RomIniFile->GetString(Identifier, "Plugin Note", "").c_str(), sizeof(pRomInfo->PluginNotes) / sizeof(char));
 
     //Get the text color
     stdstr String = m_RomIniFile->GetString("Rom Status", pRomInfo->Status, "000000");

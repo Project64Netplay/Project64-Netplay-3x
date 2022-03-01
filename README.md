@@ -1,13 +1,31 @@
 Check out our community of nearly 3000 users here for matchmaking on Mario Party and your other favorite N64 games!
-https://discord.gg/0qi7VWGokA2Ffr4q
+https://discord.gg/marioparty
 
 # Project64 MPN
-Modified Project64 2.3.2 for use in the Mario Party Netplay Discord server. Made to allow for an easier netplay experience than Kaillera that supports many more games, and includes convenience factors like GameShark codes and save files to have everything ready from the get-go.
 
-Project64 MPN encorporates the following libraries in addition to what Project64 already uses:
+Project64 MPN is an emulator for running Nintendo 64 games on Windows.
 
-* AQZ Netplay Input Plugin - [GitHub](https://github.com/CoderTimZ/NetplayInputPlugin) | [Website](https://www.play64.com/)
-* Discord RPC - [GitHub](https://github.com/discordapp/discord-rpc) | [Website](https://discordapp.com/developers/)
-* miniUPnP Client - [GitHub](https://github.com/miniupnp/miniupnp/tree/master/miniupnpc) | [Website](http://miniupnp.free.fr/)
 
-[Boost](https://www.boost.org/) is a requirement for building as well. Under Visual Studio, the correct Boost path must be configured after installation.
+## Info
+This emulator bundled a modified version of Project64 made for Mario Party Netplay
+
+## Installation
+<sub>(note: ROMs will need to be downloaded separately)</sub>
+
+## Compiling
+
+Windows:
+1) Install [Git](https://gitforwindows.org/) and [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/) (community is fine) if you haven't already
+1) Clone the Git Repo with submodules `git clone https://github.com/Divaddd/project64-mpn-src.git --recursive`
+2) Open the **Project64.sln** project in Visual Studio 2022
+3) Set Build Path to **Release** -> **x86** (x64 builds preform slower)
+4) Click Build
+5: Open Project64
+**Project64 is Located at Bin/Release/**
+
+
+##### Setting Version
+To set the Version of the emulator edit [Version.h](Source/Project64-core/Version.h)
+
+## License
+Project64 MPN is licensed under the same license as Project64, the [GNU General Public License v2.0](licence.md)

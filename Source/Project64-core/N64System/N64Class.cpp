@@ -29,6 +29,7 @@
 #endif
 #include <ShlDisp.h>
 #include <shellapi.h>
+#include <3rdParty/mario_party_netplay.h>
 
 #pragma warning(disable:4355) // Disable 'this' : used in base member initializer list
 
@@ -101,10 +102,8 @@ m_SyncCpu(SyncSystem)
             m_Recomp = new CRecompiler(m_Reg, m_EndEmulation);
         }
     }
-#ifdef USE_DISCORD
-    discordInit();
-#endif
     WriteTrace(TraceN64System, TraceDebug, "Done");
+    discordInit();
 }
 
 CN64System::~CN64System()
@@ -187,9 +186,9 @@ void CN64System::ExternalEvent(SystemEvent action)
             QueueEvent(action);
         }
         break;
-    case SysEvent_PauseCPU_Settings:
-    case SysEvent_PauseCPU_Cheats:
-        break;
+	case SysEvent_PauseCPU_Settings:
+	case SysEvent_PauseCPU_Cheats:
+		break;
     case SysEvent_ResumeCPU_FromMenu:
         // always resume if from menu
         m_hPauseEvent.Trigger();
@@ -461,9 +460,6 @@ void CN64System::CloseSystem()
         delete g_BaseSystem;
         g_BaseSystem = NULL;
     }
-#ifdef USE_DISCORD
-    Discord_Shutdown();
-#endif
     WriteTrace(TraceN64System, TraceDebug, "Done");
 }
 
@@ -493,7 +489,7 @@ bool CN64System::EmulationStarting(CThread * thread)
         }
         catch (...)
         {
-            g_Notify->DisplayError(stdstr_f("%s: Exception caught\nFile: %s\nLine: %d", __FUNCTION__, __FILE__, __LINE__).c_str());
+            //g_Notify->DisplayError(stdstr_f("%s: Exception caught\nFile: %s\nLine: %d", __FUNCTION__, __FILE__, __LINE__).c_str());
         }
     }
     else
@@ -556,7 +552,6 @@ void CN64System::StartEmulation2(bool NewThread)
     WriteTrace(TraceN64System, TraceDebug, "Done");
 }
 
-#ifdef USE_DISCORD
 static void handleDiscordReady(void)
 {
     printf("\nDiscord: ready\n");
@@ -582,25 +577,10 @@ static void handleDiscordSpectate(const char* secret)
     printf("\nDiscord: spectate (%s)\n", secret);
 }
 
-static void handleDiscordJoinRequest(const DiscordJoinRequest* request)
-{
-    char Message[256];
-    snprintf(
-        Message, 
-        sizeof(Message), 
-        "%s would like to join your game!\nContact this user on Discord.", 
-        request->username
-    );
-    Message[strlen(Message - 1)] = '\0';
-
-    g_Notify->DisplayMessage2(Message);
-    return;
-}
-
 void CN64System::getMk64Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence)
 {
-    const char *Speed = "fug";
-    const char *Track = "fug";
+    const char* Speed = "fug";
+    const char* Track = "fug";
     bool        Error = false;
     uint8_t     CupId = Rdram[MK64_MEM_CUP];
     uint8_t     MusicId = Rdram[MK64_MEM_MUSIC];
@@ -651,77 +631,77 @@ void CN64System::getMk64Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence
 
 void CN64System::getMp1Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence)
 {
-    const char *Board           = "fug";
-    const char *BoardThumbnail  = "fug";
-    bool        Error           = false;
-    uint8_t     BoardId         = Rdram[MP1_MEM_BOARD];
-    uint8_t     CurrentTurn     = Rdram[MP1_MEM_CURRENT_TURN];
-	uint8_t     GameState       = Rdram[MP1_MEM_GAMESTATE];
-    uint8_t     TotalTurns      = Rdram[MP1_MEM_TOTAL_TURNS];
+    const char* Board = "fug";
+    const char* BoardThumbnail = "fug";
+    bool        Error = false;
+    uint8_t     BoardId = Rdram[MP1_MEM_BOARD];
+    uint8_t     CurrentTurn = Rdram[MP1_MEM_CURRENT_TURN];
+    uint8_t     GameState = Rdram[MP1_MEM_GAMESTATE];
+    uint8_t     TotalTurns = Rdram[MP1_MEM_TOTAL_TURNS];
 
     if (BoardId >= 0 && BoardId < sizeof(MP1_BOARDS))
     {
         Board = MP1_BOARDS[BoardId];
         BoardThumbnail = MP1_BOARDS_THUMB[BoardId];
 
-		switch (GameState)
-		{
-		case 0x61:
-		case 0x66:
-		case 0x67:
-		case 0x69:
-		case 0x6a:
-		case 0x6b:
-		case 0x6c:
-		case 0x6d:
-		case 0x6e:
-		case 0x81:
-			Error = true;
-			break;
-		default:
-			if (CurrentTurn > TotalTurns + 1 || TotalTurns == 0 || CurrentTurn == 0)
-				Error = true;
-		}
+        switch (GameState)
+        {
+        case 0x61:
+        case 0x66:
+        case 0x67:
+        case 0x69:
+        case 0x6a:
+        case 0x6b:
+        case 0x6c:
+        case 0x6d:
+        case 0x6e:
+        case 0x81:
+            Error = true;
+            break;
+        default:
+            if (CurrentTurn > TotalTurns + 1 || TotalTurns == 0 || CurrentTurn == 0)
+                Error = true;
+        }
     }
     else Error = true;
 
-	if (GameState == 0x42 && !m_HasAutosaved)
-	{
-		SaveState();
-		m_HasAutosaved = true;
-	}
+    if (GameState == 0x42 && !m_HasAutosaved)
+    {
+        SaveState();
+        m_HasAutosaved = true;
+    }
 
-	char RpsResult[128];
+    char RpsResult[128];
     if (Error)
-	{
-		discordPresence.state = "Setting up...";
-		discordPresence.smallImageKey = NULL;
-		snprintf(
-			RpsResult,
-			sizeof(RpsResult),
-			"Players: %d/4",
-			m_DiscordCurrentPlayers
-		);
-	}
-	else
-	{
-		discordPresence.state = Board;
-		discordPresence.smallImageKey = BoardThumbnail;
-		if (BoardId == 10) //Mini-Game Island
-			snprintf(RpsResult, sizeof(RpsResult), "Story Mode"); //TODO
-		else
-			snprintf(
-				RpsResult,
-				sizeof(RpsResult),
-				"Players: %d/4 Turn: %d/%d",
-				m_DiscordCurrentPlayers,
-				CurrentTurn,
-				TotalTurns
-			);
-	}
+    {
+        discordPresence.state = "Setting up...";
+        discordPresence.smallImageKey = NULL;
+        snprintf(
+            RpsResult,
+            sizeof(RpsResult),
+            "Players: %d/4",
+            m_DiscordCurrentPlayers
+        );
+    }
+    else
+    {
+        discordPresence.state = Board;
+        discordPresence.smallImageKey = BoardThumbnail;
+        if (BoardId == 10) //Mini-Game Island
+            snprintf(RpsResult, sizeof(RpsResult), "Story Mode"); //TODO
+        else
+            snprintf(
+                RpsResult,
+                sizeof(RpsResult),
+                "Players: %d/4 Turn: %d/%d",
+                m_DiscordCurrentPlayers,
+                CurrentTurn,
+                TotalTurns
+            );
+    }
 
-	RpsResult[sizeof(RpsResult) - 1] = 0;
-	discordPresence.details = RpsResult;
+    RpsResult[sizeof(RpsResult) - 1] = 0;
+    discordPresence.details = RpsResult;
     discordPresence.largeImageKey = "box-mp1";
     discordPresence.largeImageText = "Mario Party";
     discordPresence.smallImageText = Board;
@@ -731,168 +711,168 @@ void CN64System::getMp1Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence)
 
 void CN64System::getMp2Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence)
 {
-    const char *Board           = "fug";
-    const char *BoardThumbnail  = "fug";
-    bool        Error           = false;
-    uint8_t     BoardId         = Rdram[MP2_MEM_BOARD];
-    uint8_t     GameState       = Rdram[MP2_MEM_GAMESTATE];
-    uint8_t     GameType        = Rdram[MP2_MEM_GAMETYPE];
-    uint8_t     CurrentTurn     = Rdram[MP2_MEM_CURRENT_TURN];
-    uint8_t     TotalTurns      = Rdram[MP2_MEM_TOTAL_TURNS];
+    const char* Board = "fug";
+    const char* BoardThumbnail = "fug";
+    bool        Error = false;
+    uint8_t     BoardId = Rdram[MP2_MEM_BOARD];
+    uint8_t     GameState = Rdram[MP2_MEM_GAMESTATE];
+    uint8_t     GameType = Rdram[MP2_MEM_GAMETYPE];
+    uint8_t     CurrentTurn = Rdram[MP2_MEM_CURRENT_TURN];
+    uint8_t     TotalTurns = Rdram[MP2_MEM_TOTAL_TURNS];
 
     if (BoardId >= 0 && BoardId < sizeof(MP2_BOARDS))
     {
         Board = MP2_BOARDS[BoardId];
         BoardThumbnail = MP2_BOARDS_THUMB[BoardId];
 
-		switch (GameState)
-		{
-		case 0x55:
-		case 0x57:
-		case 0x58:
-		case 0x5b:
-		case 0x5c:
-		case 0x62:
-			Error = true;
-			break;
-		default:
-			if (CurrentTurn > TotalTurns + 1 || TotalTurns == 0 || CurrentTurn == 0)
-				Error = true;
-		}
+        switch (GameState)
+        {
+        case 0x55:
+        case 0x57:
+        case 0x58:
+        case 0x5b:
+        case 0x5c:
+        case 0x62:
+            Error = true;
+            break;
+        default:
+            if (CurrentTurn > TotalTurns + 1 || TotalTurns == 0 || CurrentTurn == 0)
+                Error = true;
+        }
     }
     else Error = true;
 
-	if (GameState == 0x52 && !m_HasAutosaved)
-	{
-		SaveState();
-		m_HasAutosaved = true;
-	}
+    if (GameState == 0x52 && !m_HasAutosaved)
+    {
+        SaveState();
+        m_HasAutosaved = true;
+    }
 
-	char RpsResult[128];
+    char RpsResult[128];
     if (Error)
-	{
-		discordPresence.state = "Setting up...";
-		discordPresence.smallImageKey = NULL;
-		snprintf(
-			RpsResult,
-			sizeof(RpsResult),
-			"Players: %d/4",
-			m_DiscordCurrentPlayers
-		);
-	}
-	else
-	{
-		if (BoardId == 7) //Mini-Game Coaster
-			snprintf(RpsResult, sizeof(RpsResult), "Story Mode"); //TODO
-		else
-			snprintf(
-				RpsResult,
-				sizeof(RpsResult),
-				"Players: %d/4 Turn: %d/%d",
-				m_DiscordCurrentPlayers,
-				CurrentTurn,
-				TotalTurns
-			);
-		discordPresence.state = Board;
-		discordPresence.smallImageKey = BoardThumbnail;
-	}
+    {
+        discordPresence.state = "Setting up...";
+        discordPresence.smallImageKey = NULL;
+        snprintf(
+            RpsResult,
+            sizeof(RpsResult),
+            "Players: %d/4",
+            m_DiscordCurrentPlayers
+        );
+    }
+    else
+    {
+        if (BoardId == 7) //Mini-Game Coaster
+            snprintf(RpsResult, sizeof(RpsResult), "Story Mode"); //TODO
+        else
+            snprintf(
+                RpsResult,
+                sizeof(RpsResult),
+                "Players: %d/4 Turn: %d/%d",
+                m_DiscordCurrentPlayers,
+                CurrentTurn,
+                TotalTurns
+            );
+        discordPresence.state = Board;
+        discordPresence.smallImageKey = BoardThumbnail;
+    }
 
-	RpsResult[sizeof(RpsResult) - 1] = 0;
-	discordPresence.details = RpsResult;
-    discordPresence.largeImageKey   = "box-mp2";
-    discordPresence.largeImageText  = "Mario Party 2";
-    discordPresence.smallImageText  = Board;
+    RpsResult[sizeof(RpsResult) - 1] = 0;
+    discordPresence.details = RpsResult;
+    discordPresence.largeImageKey = "box-mp2";
+    discordPresence.largeImageText = "Mario Party 2";
+    discordPresence.smallImageText = Board;
 
     Discord_UpdatePresence(&discordPresence);
 }
 
 void CN64System::getMp3Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence)
 {
-    const char *Board          = "fug";
-    const char *BoardThumbnail = "fug";
-    bool    Error              = false;
-    uint8_t BoardId            = Rdram[MP3_MEM_BOARD];
-    uint8_t GameState          = Rdram[MP3_MEM_GAMESTATE];
-    uint8_t GameType           = Rdram[MP3_MEM_GAMETYPE];
-    uint8_t CurrentTurn        = Rdram[MP3_MEM_CURRENT_TURN];
-    uint8_t MaxPlayers         = 4;
-    uint8_t TotalTurns         = Rdram[MP3_MEM_TOTAL_TURNS];
+    const char* Board = "fug";
+    const char* BoardThumbnail = "fug";
+    bool    Error = false;
+    uint8_t BoardId = Rdram[MP3_MEM_BOARD];
+    uint8_t GameState = Rdram[MP3_MEM_GAMESTATE];
+    uint8_t GameType = Rdram[MP3_MEM_GAMETYPE];
+    uint8_t CurrentTurn = Rdram[MP3_MEM_CURRENT_TURN];
+    uint8_t MaxPlayers = 4;
+    uint8_t TotalTurns = Rdram[MP3_MEM_TOTAL_TURNS];
 
     /* Get info on current board, MP3 has BR and Duel */
     if (BoardId >= 0 && BoardId < sizeof(MP3_BOARDS))
     {
-		switch (GameState)
-		{
-		case 0x55:
-		case 0x77:
-		case 0x78:
-		case 0x79:
-		case 0x7a:
-		case 0x7b:
-			Error = true;
-			break;
-		default:
-			if (GameType == 1 || GameType == 5)
-			{
-				Board = MP3_BOARDS[BoardId];
-				BoardThumbnail = MP3_BOARDS_THUMB[BoardId];
-				MaxPlayers = 4;
-			}
-			else if (GameType == 2 || GameType == 6)
-			{
-				Board = MP3_BOARDS_DUEL[BoardId];
-				BoardThumbnail = MP3_BOARDS_DUEL_THUMB[BoardId];
-				MaxPlayers = 2;
-			}
-			else Error = true;
+        switch (GameState)
+        {
+        case 0x55:
+        case 0x77:
+        case 0x78:
+        case 0x79:
+        case 0x7a:
+        case 0x7b:
+            Error = true;
+            break;
+        default:
+            if (GameType == 1 || GameType == 5)
+            {
+                Board = MP3_BOARDS[BoardId];
+                BoardThumbnail = MP3_BOARDS_THUMB[BoardId];
+                MaxPlayers = 4;
+            }
+            else if (GameType == 2 || GameType == 6)
+            {
+                Board = MP3_BOARDS_DUEL[BoardId];
+                BoardThumbnail = MP3_BOARDS_DUEL_THUMB[BoardId];
+                MaxPlayers = 2;
+            }
+            else Error = true;
 
-			if (CurrentTurn > TotalTurns + 1 || TotalTurns == 0 || CurrentTurn == 0)
-				Error = true;
-		}
+            if (CurrentTurn > TotalTurns + 1 || TotalTurns == 0 || CurrentTurn == 0)
+                Error = true;
+        }
     }
     else Error = true;
 
-	if (GameState == 0x4f && !m_HasAutosaved)
-	{
-		SaveState();
-		m_HasAutosaved = true;
-	}
+    if (GameState == 0x4f && !m_HasAutosaved)
+    {
+        SaveState();
+        m_HasAutosaved = true;
+    }
 
-    if (GameState != 0 && GameState < sizeof(MP3_MINIS)/4)
+    if (GameState != 0 && GameState < sizeof(MP3_MINIS) / 4)
         discordPresence.state = MP3_MINIS[GameState];
-	char RpsResult[128];
-	if ((Error) || GameState > 118)
-	{
-		discordPresence.state = "Setting up...";
-		discordPresence.smallImageKey = NULL;
-		snprintf(
-			RpsResult,
-			sizeof(RpsResult),
-			"Players: %d/%d",
-			m_DiscordCurrentPlayers,
-			MaxPlayers
-		);
-	}
-	else
-	{
-		discordPresence.state = Board;
-		discordPresence.smallImageKey = BoardThumbnail;
-		if (GameType == 5 || GameType == 6)
-			snprintf(RpsResult, sizeof(RpsResult), "Story Mode"); //TODO
-		else
-			snprintf(
-				RpsResult,
-				sizeof(RpsResult),
-				"Players: %d/%d Turn: %d/%d",
-				m_DiscordCurrentPlayers,
-				MaxPlayers,
-				CurrentTurn,
-				TotalTurns
-			);
-	}
+    char RpsResult[128];
+    if ((Error) || GameState > 118)
+    {
+        discordPresence.state = "Setting up...";
+        discordPresence.smallImageKey = NULL;
+        snprintf(
+            RpsResult,
+            sizeof(RpsResult),
+            "Players: %d/%d",
+            m_DiscordCurrentPlayers,
+            MaxPlayers
+        );
+    }
+    else
+    {
+        discordPresence.state = Board;
+        discordPresence.smallImageKey = BoardThumbnail;
+        if (GameType == 5 || GameType == 6)
+            snprintf(RpsResult, sizeof(RpsResult), "Story Mode"); //TODO
+        else
+            snprintf(
+                RpsResult,
+                sizeof(RpsResult),
+                "Players: %d/%d Turn: %d/%d",
+                m_DiscordCurrentPlayers,
+                MaxPlayers,
+                CurrentTurn,
+                TotalTurns
+            );
+    }
 
-	RpsResult[sizeof(RpsResult) - 1] = 0;
-	discordPresence.details = RpsResult;
+    RpsResult[sizeof(RpsResult) - 1] = 0;
+    discordPresence.details = RpsResult;
     discordPresence.largeImageKey = "box-mp3";
     discordPresence.largeImageText = "Mario Party 3";
     discordPresence.smallImageText = Board;
@@ -902,13 +882,13 @@ void CN64System::getMp3Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence)
 
 void CN64System::getSsbRps(uint8_t* Rdram, DiscordRichPresence& discordPresence)
 {
-    const char *Stage           = "fug";
-    const char *Player[4]       = { "fug" };
-    const char *StageThumbnail  = "fug";
-    bool        Error           = false;
-    uint8_t     StageId         = Rdram[SSB_MEM_STAGE];
+    const char* Stage = "fug";
+    const char* Player[4] = { "fug" };
+    const char* StageThumbnail = "fug";
+    bool        Error = false;
+    uint8_t     StageId = Rdram[SSB_MEM_STAGE];
 
-    if (StageId >= 0 && StageId < sizeof(SSB_STAGES)/4)
+    if (StageId >= 0 && StageId < sizeof(SSB_STAGES) / 4)
     {
         Stage = SSB_STAGES[StageId];
         StageThumbnail = SSB_STAGES_THUMB[StageId];
@@ -916,7 +896,7 @@ void CN64System::getSsbRps(uint8_t* Rdram, DiscordRichPresence& discordPresence)
         {
             uint8_t Character = Rdram[SSB_MEM_PLAYER + SSB_MEM_PLAYER_OFFSET * i];
 
-            if (Character > sizeof(SSB_CHARACTERS)/4)
+            if (Character > sizeof(SSB_CHARACTERS) / 4)
                 Error = true;
             else
                 Player[i] = SSB_CHARACTERS[Character];
@@ -962,7 +942,7 @@ void CN64System::getSsbRps(uint8_t* Rdram, DiscordRichPresence& discordPresence)
 
 void CN64System::getNumberControllers()
 {
-    CONTROL * Controllers = g_Plugins->Control()->PluginControllers();
+    CONTROL* Controllers = g_Plugins->Control()->PluginControllers();
     m_DiscordCurrentPlayers = 0;
     for (uint8_t i = 0; i < sizeof(Controllers); i++)
         if (Controllers[i].Present != 0)
@@ -971,27 +951,25 @@ void CN64System::getNumberControllers()
 
 void CN64System::discordInit()
 {
-    m_DiscordApplicationId  = "888655408623943731";
+    m_DiscordApplicationId = "888655408623943731";
     m_DiscordCurrentPlayers = 0;
-    m_DiscordNextPost       = time(0);
-    m_DiscordSendPresence   = true;
-    m_DiscordStartTime      = time(0);
+    m_DiscordNextPost = time(0);
+    m_DiscordSendPresence = true;
+    m_DiscordStartTime = time(0);
 
     DiscordEventHandlers handlers;
     memset(&handlers, 0, sizeof(handlers));
-    handlers.ready = handleDiscordReady;
     handlers.disconnected = handleDiscordDisconnected;
     handlers.errored = handleDiscordError;
     handlers.joinGame = handleDiscordJoin;
     handlers.spectateGame = handleDiscordSpectate;
-    handlers.joinRequest = handleDiscordJoinRequest;
 
     Discord_Initialize(m_DiscordApplicationId, &handlers, 1, NULL);
 }
 
 void CN64System::discordUpdate()
 {
-    if (m_DiscordSendPresence) 
+    if (m_DiscordSendPresence)
     {
         if (time(0) > m_DiscordNextPost)
         {
@@ -1011,35 +989,12 @@ void CN64System::discordUpdate()
                 getSsbRps(m_MMU_VM.Rdram(), discordPresence);
             else if (strstr(g_Settings->LoadStringVal(Game_GameName).c_str(), "MARIOKART64") != NULL)
                 getMk64Rps(m_MMU_VM.Rdram(), discordPresence);
-            else
-            {
-                char Players[128];
-                snprintf(Players, sizeof(Players), "Players: %d/4", m_DiscordCurrentPlayers);
-                discordPresence.details = Players;
-                
-                char PlayedRom[128];
-                if (strlen(g_Settings->LoadStringVal(Rdb_GoodName).c_str()) > 3)
-                {
-                    snprintf(PlayedRom, sizeof(PlayedRom), "%s", g_Settings->LoadStringVal(Rdb_GoodName).c_str());
-                    char* FirstIdentifier = strchr(PlayedRom, '(');
-                    if (FirstIdentifier != NULL)
-                        *FirstIdentifier = '\0';
-                }
-                else
-                    snprintf(PlayedRom, sizeof(PlayedRom), "%s", "Unknown game");
-                discordPresence.state = PlayedRom;
-
-                discordPresence.largeImageKey = "default-pj64";
-                Discord_UpdatePresence(&discordPresence);
-            }
-            m_DiscordNextPost = time(0) + 5;
         }
     }
     else
         Discord_ClearPresence();
     Discord_RunCallbacks();
 }
-#endif
 
 void CN64System::StartEmulation(bool NewThread)
 {
@@ -2688,9 +2643,7 @@ void CN64System::RefreshScreen()
         }
         m_Cheats.ApplyCheats(g_MMU);
     }
-#ifdef USE_DISCORD
     discordUpdate();
-#endif
     //    if (bProfiling)    { m_Profile.StartTimer(ProfilingAddr != Timer_None ? ProfilingAddr : Timer_R4300); }
 }
 

@@ -113,7 +113,7 @@ void CSettings::AddHowToHandleSetting(const char * BaseDirectory)
     AddHandler(Setting_EraseGameDefaults, new CSettingTypeApplication("", "Erase on default", (uint32_t)true));
     AddHandler(Setting_CheckEmuRunning, new CSettingTypeApplication("", "Check Running", (uint32_t)true));
 
-    AddHandler(Setting_RememberCheats, new CSettingTypeApplication("", "Remember Cheats", (uint32_t)false));
+    AddHandler(Setting_RememberCheats, new CSettingTypeApplication("", "Remember Cheats", (uint32_t)true));
 #ifdef ANDROID
     AddHandler(Setting_UniqueSaveDir, new CSettingTypeTempBool(true));
 #else
@@ -127,6 +127,7 @@ void CSettings::AddHowToHandleSetting(const char * BaseDirectory)
     AddHandler(Setting_LanguageDir, new CSettingTypeApplicationPath("Lang Directory", "Directory", Setting_LanguageDirDefault));
 
     AddHandler(Rdb_GoodName, new CSettingTypeRomDatabase("Good Name", Game_GameName));
+	AddHandler(Rdb_RPCKey, new CSettingTypeRomDatabase("RPC Key", Game_RPCKey));
     AddHandler(Rdb_SaveChip, new CSettingTypeRDBSaveChip("Save Type", SaveChip_Auto));
 #ifdef _DEBUG
     AddHandler(Rdb_CpuType, new CSettingTypeRDBCpuType("CPU Type", CPU_SyncCores));

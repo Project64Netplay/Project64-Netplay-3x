@@ -37,12 +37,12 @@ void CEeprom::EepromCommand(uint8_t * Command)
 
     if (g_System->m_SaveUsing == SaveChip_Auto)
     {
-        // Project64-MPN: Force 16K for any version of MP3
-        if (strstr(g_Settings->LoadStringVal(Game_GameName).c_str(), "MarioParty3") != NULL)
-            g_System->m_SaveUsing = SaveChip_Eeprom_16K;
-        else
-            g_System->m_SaveUsing = SaveChip_Eeprom_4K;
-    }
+		// Force 16K for any version of MP3
+		if (strstr(g_Settings->LoadStringVal(Game_GameName).c_str(), "MarioParty3") != NULL)
+			g_System->m_SaveUsing = SaveChip_Eeprom_16K;
+		else
+			g_System->m_SaveUsing = SaveChip_Eeprom_4K;
+	}
 
     switch (Command[2])
     {

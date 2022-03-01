@@ -83,7 +83,6 @@ void CLanguage::LoadDefaultStrings(void)
     DEF_STR(MENU_RESTORE, "&Load State");
     DEF_STR(MENU_LOAD, "Load...");
     DEF_STR(MENU_CURRENT_SAVE, "Current Save S&tate");
-    DEF_STR(MENU_CHEAT, "Cheats...");
     DEF_STR(MENU_GS_BUTTON, "GS Button");
     DEF_STR(MENU_RESUME, "R&esume");
     DEF_STR(MENU_RESET_SOFT, "&Soft Reset");
@@ -94,12 +93,13 @@ void CLanguage::LoadDefaultStrings(void)
     DEF_STR(MENU_OPTIONS, "&Options");
     DEF_STR(MENU_FULL_SCREEN, "&Full Screen");
     DEF_STR(MENU_ON_TOP, "&Always on &Top");
-    DEF_STR(MENU_CONFG_GFX, "Configure Graphics Plugin...");
-    DEF_STR(MENU_CONFG_AUDIO, "Configure Audio Plugin...");
-    DEF_STR(MENU_CONFG_CTRL, "Configure Controller Plugin...");
-    DEF_STR(MENU_CONFG_RSP, "Configure RSP Plugin...");
+    DEF_STR(MENU_CHEAT, "Select Cheats");
+    DEF_STR(MENU_CONFG_GFX, "Video Settings");
+    DEF_STR(MENU_CONFG_AUDIO, "Audio Settings");
+    DEF_STR(MENU_CONFG_CTRL, "Input Settings");
+    //DEF_STR(MENU_CONFG_RSP, "RSP Settings");
     DEF_STR(MENU_SHOW_CPU, "Show CPU Usage");
-    DEF_STR(MENU_SETTINGS, "&Settings...");
+    DEF_STR(MENU_SETTINGS, "&General Settings");
 
     //Debugger Menu
     DEF_STR(MENU_DEBUGGER, "&Debugger");
@@ -111,9 +111,8 @@ void CLanguage::LoadDefaultStrings(void)
     DEF_STR(MENU_HELP, "&Help");
     DEF_STR(MENU_ABOUT_INI, "About Conf&ig Files");
     DEF_STR(MENU_ABOUT_PJ64, "&About Project64");
-    DEF_STR(MENU_FORUM, "Support &Forum");
-    DEF_STR(MENU_HOMEPAGE, "&Homepage");
-    
+    DEF_STR(MENU_STOCKHOMEPAGE, "&Homepage");
+
     //Netplay Menu
     DEF_STR(MENU_NETPLAY, "&Netplay");
     DEF_STR(MENU_MPN, "Mario Party Netplay &Discord");
@@ -138,9 +137,8 @@ void CLanguage::LoadDefaultStrings(void)
     DEF_STR(POPUP_PLAY, "Play Game");
     DEF_STR(POPUP_INFO, "ROM Information");
     DEF_STR(POPUP_SETTINGS, "Edit Game Settings");
-    DEF_STR(POPUP_CHEATS, "Edit Cheats");
+    DEF_STR(POPUP_CHEATS, "Select Cheats");
     DEF_STR(POPUP_GFX_PLUGIN, "Graphics Plugin");
-    DEF_STR(POPUP_PLAYDISK, "Play Game with Disk");
 
     //Alternate Name to save Slot
     DEF_STR(SAVE_SLOT_DEFAULT, "Save Slot - Default");
@@ -170,7 +168,7 @@ void CLanguage::LoadDefaultStrings(void)
     DEF_STR(RB_CART_ID, "Cartridge ID");
     DEF_STR(RB_MANUFACTUER, "Manufacturer");
     DEF_STR(RB_COUNTRY, "Country");
-    DEF_STR(RB_DEVELOPER, "Developer");
+    DEF_STR(RB_DEVELOPER, "Maker");
     DEF_STR(RB_CRC1, "CRC1");
     DEF_STR(RB_CRC2, "CRC2");
     DEF_STR(RB_CICCHIP, "CIC Chip");
@@ -295,6 +293,7 @@ void CLanguage::LoadDefaultStrings(void)
     DEF_STR(ROM_COUNTPERBYTE, "AI count per byte:");
     DEF_STR(ROM_32BIT, "32-bit engine:");
     DEF_STR(ROM_DELAY_DP, "Delay DP interrupt:");
+	//DEF_STR(ROM_OVER_CLOCK_MODIFIER, "Over Clock Modifier:");
 
     //Core Styles
     DEF_STR(CORE_INTERPTER, "Interpreter");
@@ -318,6 +317,7 @@ void CLanguage::LoadDefaultStrings(void)
     //RDRAM Size
     DEF_STR(RDRAM_4MB, "4 MB");
     DEF_STR(RDRAM_8MB, "8 MB");
+	DEF_STR(RDRAM_16MB, "16 MB");
 
     //Advanced Block Linking
     DEF_STR(ABL_ON, "On");
@@ -392,9 +392,9 @@ void CLanguage::LoadDefaultStrings(void)
     * Cheats                                                                         *
     *********************************************************************************/
     //Cheat List
-    DEF_STR(CHEAT_TITLE, "Cheats");
-    DEF_STR(CHEAT_LIST_FRAME, "Cheats:");
-    DEF_STR(CHEAT_NOTES_FRAME, " Notes: ");
+    DEF_STR(CHEAT_TITLE, "Modifications");
+    DEF_STR(CHEAT_LIST_FRAME, "Modifications:");
+    DEF_STR(CHEAT_NOTES_FRAME, "Notes: ");
     DEF_STR(CHEAT_MARK_ALL, "Mark All");
     DEF_STR(CHEAT_MARK_NONE, "Unmark All");
 

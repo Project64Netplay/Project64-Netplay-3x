@@ -11,21 +11,20 @@
 #define STRINGIZE2(s) #s
 #define STRINGIZE(s) STRINGIZE2(s)
 
-#define VERSION_MAJOR               2
-#define VERSION_MINOR               3
-#define VERSION_REVISION            2
-#define VERSION_BUILD               9999
+#define VERSION_MAJOR               "MPN"
+
 
 #define VER_FILE_DESCRIPTION_STR    "Project64 MPN"
 #define VER_FILE_VERSION            VERSION_MAJOR, VERSION_MINOR, VERSION_REVISION, VERSION_BUILD
-#define VER_FILE_VERSION_STR        ""
+#define VER_FILE_VERSION_STR        "MPN"
 
-#define VER_PRODUCTNAME_STR         "Project64"
+
+#define VER_PRODUCTNAME_STR         "Project64 MPN"
 #define VER_PRODUCT_VERSION         VER_FILE_VERSION
 #define VER_PRODUCT_VERSION_STR     VER_FILE_VERSION_STR
-#define VER_ORIGINAL_FILENAME_STR   VER_PRODUCTNAME_STR ".exe"
+#define VER_ORIGINAL_FIfLENAME_STR   VER_PRODUCTNAME_STR ".exe"
 #define VER_INTERNAL_NAME_STR       VER_PRODUCTNAME_STR
-#define VER_COPYRIGHT_STR           "Copyright (C) 2013"
+#define VER_COPYRIGHT_STR           "Copyright (C) 2016-2022"
 
 #ifdef _DEBUG
 #define VER_VER_DEBUG             VS_FF_DEBUG

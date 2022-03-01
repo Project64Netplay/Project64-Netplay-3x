@@ -76,7 +76,6 @@ enum LanguageStringID
     MENU_RESTORE = 127,
     MENU_LOAD = 128,
     MENU_CURRENT_SAVE = 129,
-    MENU_CHEAT = 130,
     MENU_GS_BUTTON = 131,
     MENU_RESUME = 132,
     MENU_RESET_SOFT = 133,
@@ -91,6 +90,7 @@ enum LanguageStringID
     MENU_CONFG_AUDIO = 144,
     MENU_CONFG_CTRL = 145,
     MENU_CONFG_RSP = 146,
+	MENU_CHEAT = 130,
     MENU_SHOW_CPU = 147,
     MENU_SETTINGS = 148,
 
@@ -104,10 +104,10 @@ enum LanguageStringID
     MENU_HELP = 180,
     MENU_ABOUT_INI = 181,
     MENU_ABOUT_PJ64 = 182,
-    MENU_FORUM = 183,
+    MENU_STOCKHOMEPAGE = 183,
     MENU_HOMEPAGE = 184,
-    
-    //Netplay Menu
+
+	//Netplay Menu
     MENU_NETPLAY = 4000,
     MENU_REPLACESAVES = 4001,
     MENU_MPN = 4002,
@@ -133,7 +133,7 @@ enum LanguageStringID
     POPUP_SETTINGS = 212,
     POPUP_CHEATS = 213,
     POPUP_GFX_PLUGIN = 214,
-    POPUP_PLAYDISK = 215,
+    POPUP_PLAYDISK = 215, 
 
     //selecting save slot
     SAVE_SLOT_DEFAULT = 220,
@@ -164,7 +164,6 @@ enum LanguageStringID
     MENUDES_SAVE_AS = 262,
     MENUDES_RESTORE = 263,
     MENUDES_LOAD = 264,
-    MENUDES_CHEAT = 265,
     MENUDES_GS_BUTTON = 266,
     MENUDES_FULL_SCREEN = 267,
     MENUDES_ON_TOP = 268,
@@ -327,6 +326,7 @@ enum LanguageStringID
     ROM_COUNTPERBYTE = 537,
     ROM_32BIT = 538,
     ROM_DELAY_DP = 539,
+	//ROM_OVER_CLOCK_MODIFIER = 5400,
 
     //Core Styles
     CORE_INTERPTER = 540,
@@ -350,6 +350,7 @@ enum LanguageStringID
     //RDRAM Size
     RDRAM_4MB = 580,
     RDRAM_8MB = 581,
+	RDRAM_16MB = 582,
 
     //Advanced Block Linking
     ABL_ON = 600,
