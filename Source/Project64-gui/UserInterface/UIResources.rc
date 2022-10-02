@@ -400,7 +400,7 @@ LTEXT           "PJ64 cheat database, testing, end user support", IDC_GENT_DETAI
 LTEXT           "Project64-MPN Team:", IDC_PJ64MPN_TEAM, 233, 88, 168, 12
 LTEXT           "Special Thanks to:", IDC_THANKS, 16, 239, 403, 12
 LTEXT           "Jahra!n, Witten, RadeonUser, Trotterwatch, Pixi", IDC_THANK_LIST, 16, 255, 403, 27
-LTEXT           "Nora", IDC_NORA, 231, 103, 49, 11
+LTEXT           "Nayla", IDC_NORA, 231, 103, 49, 11
 LTEXT           "Celerizer", IDC_CELERIZER, 232, 128, 49, 25
 LTEXT           "Current application programmer and maintainer", IDC_NORA_DETAILS, 310, 103, 136, 24
 LTEXT           "CoderTim", IDC_AQZ, 231, 165, 49, 11
@@ -410,6 +410,7 @@ LTEXT           "AQZ Netplay Developer", IDC_AQZ_DETAILS, 310, 165, 129, 24
 LTEXT           "Cheat code developer", IDC_RAIN_DETAILS, 310, 184, 129, 24
 LTEXT           "Lave", IDC_LAVE, 232, 220, 49, 11
 LTEXT           "Founder", IDC_LAVE_DETAILS, 310, 220, 136, 24
+LTEXT           "Version: 1.7.0.x", IDC_VERSION, 15, 72, 169, 11, SS_NOTIFY
 END
 
 IDD_Logging_General DIALOGEX 0, 0, 200, 154

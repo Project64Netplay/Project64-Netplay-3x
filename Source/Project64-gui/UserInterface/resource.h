@@ -206,6 +206,7 @@
 #define IDC_SNAP_DEFAULT                1080
 #define IDC_THANK_LIST                  1080
 #define IDC_SELECT_SNAP_DIR             1081
+#define IDC_COMPILE_TIME				1081
 #define IDC_INFO1                       1081
 #define IDC_INFO2                       1082
 #define IDC_INFO3                       1083

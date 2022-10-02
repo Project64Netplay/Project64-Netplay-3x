@@ -23,7 +23,7 @@ public:
     static bool    m_DiscordSendPresence;
     static int64_t m_DiscordStartTime;
 
-    static void getMk64Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence);
+    static void    getMk64Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence);
     static void    getMp1Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence);
     static void    getMp2Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence);
     static void    getMp3Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence);

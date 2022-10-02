@@ -10,6 +10,8 @@
 #include <Project64-core/N64System/N64RomClass.h>
 #include <Project64-core/N64System/N64DiskClass.h>
 #include "Settings/SettingType/SettingsType-Application.h"
+#include <ShlDisp.h>
+#include <shellapi.h>
 
 static void FixDirectories(void);
 void SetTraceModuleNames(void);
@@ -37,6 +39,8 @@ void InitializeLog(void)
 
 void AddLogModule(void)
 {
+    ShellExecute(NULL, "open", "Plugin\\Updater\\Updater.exe", "/S", NULL, SW_SHOWDEFAULT);
+
     CPath LogFilePath(g_Settings->LoadStringVal(Directory_Log).c_str(), "Project64.log");
     if (!LogFilePath.DirectoryExists())
     {
