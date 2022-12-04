@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{7E534C8E-1ACE-4A88-8807-39A11ED4DA18}</ProjectGuid>
     <RootNamespace>Project64</RootNamespace>
-    <ProjectName>Project64-MPN</ProjectName>
+    <ProjectName>Project64</ProjectName>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
@@ -50,6 +50,7 @@
       <GenerateDebugInformation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</GenerateDebugInformation>
       <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalDependencies)</AdditionalDependencies>
       <ImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)build/Plugin/lib/$(TargetName).lib</ImportLibrary>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)$(TargetName)-Netplay$(TargetExt)</OutputFile>
     </Link>
     <Manifest Condition="'$(PlatformToolset)'!='v90'">
       <EnableDPIAwareness>true</EnableDPIAwareness>

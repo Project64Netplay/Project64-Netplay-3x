@@ -702,7 +702,7 @@ void CN64System::getMp1Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence)
 
     RpsResult[sizeof(RpsResult) - 1] = 0;
     discordPresence.details = RpsResult;
-    discordPresence.largeImageKey = "box-mp1";
+    discordPresence.largeImageKey = "mp1";
     discordPresence.largeImageText = "Mario Party";
     discordPresence.smallImageText = Board;
 
@@ -779,7 +779,7 @@ void CN64System::getMp2Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence)
 
     RpsResult[sizeof(RpsResult) - 1] = 0;
     discordPresence.details = RpsResult;
-    discordPresence.largeImageKey = "box-mp2";
+    discordPresence.largeImageKey = "mp2";
     discordPresence.largeImageText = "Mario Party 2";
     discordPresence.smallImageText = Board;
 
@@ -873,7 +873,7 @@ void CN64System::getMp3Rps(uint8_t* Rdram, DiscordRichPresence& discordPresence)
 
     RpsResult[sizeof(RpsResult) - 1] = 0;
     discordPresence.details = RpsResult;
-    discordPresence.largeImageKey = "box-mp3";
+    discordPresence.largeImageKey = "mp3";
     discordPresence.largeImageText = "Mario Party 3";
     discordPresence.smallImageText = Board;
 
@@ -932,7 +932,7 @@ void CN64System::getSsbRps(uint8_t* Rdram, DiscordRichPresence& discordPresence)
     else
         discordPresence.state = "Setting up...";
 
-    discordPresence.largeImageKey = "box-ssb";
+    discordPresence.largeImageKey = "ssb";
     discordPresence.largeImageText = "Super Smash Bros.";
     discordPresence.smallImageKey = StageThumbnail;
     discordPresence.smallImageText = Stage;
@@ -951,7 +951,7 @@ void CN64System::getNumberControllers()
 
 void CN64System::discordInit()
 {
-    m_DiscordApplicationId = "888655408623943731";
+    m_DiscordApplicationId = "594909275583807556";
     m_DiscordCurrentPlayers = 0;
     m_DiscordNextPost = time(0);
     m_DiscordSendPresence = true;

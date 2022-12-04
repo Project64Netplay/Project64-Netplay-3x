@@ -115,7 +115,7 @@ void CLanguage::LoadDefaultStrings(void)
 
     //Netplay Menu
     DEF_STR(MENU_NETPLAY, "&Netplay");
-    DEF_STR(MENU_MPN, "Mario Party Netplay &Discord");
+    DEF_STR(MENU_MPN, "Netplay &Discord");
     DEF_STR(MENU_REPLACESAVES, "&Replace Save Files");
     DEF_STR(MENU_UPDATE_EMULATOR, "Update &Emulator...");
 

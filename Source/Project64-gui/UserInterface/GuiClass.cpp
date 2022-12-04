@@ -1231,7 +1231,10 @@ DWORD CALLBACK AboutBoxProc(HWND hWnd, DWORD uMsg, DWORD wParam, DWORD /*lParam*
         SendDlgItemMessage(hWnd, IDC_RAIN_DETAILS, WM_SETFONT, (WPARAM)hTextFont, TRUE);
         SendDlgItemMessage(hWnd, IDC_LAVE_DETAILS, WM_SETFONT, (WPARAM)hTextFont, TRUE);
 
+        SendDlgItemMessage(hWnd, IDC_THANKS2, WM_SETFONT, (WPARAM)hPageHeadingFont, TRUE);
+
         SendDlgItemMessage(hWnd, IDC_THANK_LIST, WM_SETFONT, (WPARAM)hTextFont, TRUE);
+        SendDlgItemMessage(hWnd, IDC_THANK2_LIST, WM_SETFONT, (WPARAM)hTextFont, TRUE);
 
 
 

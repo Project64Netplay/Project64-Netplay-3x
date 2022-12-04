@@ -17,7 +17,7 @@
 #define TICKS_PER_SECOND   10000000
 
 //Discord Project64 App ID
-#define PJ64_DISCORD_APPID "888655408623943731"
+#define PJ64_DISCORD_APPID "594909275583807556"
 
 void CDiscord::Init()
 {
@@ -59,8 +59,8 @@ void CDiscord::Update(bool bHaveGame)
 		discordPresence.largeImageKey = keyState; //sets the Rom Header Variable as the large image key (the file you upload to discord)
 
 		//Small Image over DiscordRPC
-		discordPresence.smallImageKey = "project64"; //Project 64 Logo in bottom right corner
-		discordPresence.smallImageText = "Project64-MPN"; //Name of the Project64 Logo
+		discordPresence.smallImageKey = "icon"; //Project 64 Logo in bottom right corner
+		discordPresence.smallImageText = "Project64 Netplay"; //Name of the Project64 Logo
 		discordPresence.instance = 1; //Instance of Active DiscordRPC
 	}
 	else
@@ -70,8 +70,8 @@ void CDiscord::Update(bool bHaveGame)
 		// This is not perfect due to Project64's method of loading 
 		// ROM's into the filesystem before emulation starts.
 		discordPresence.details = "Not in-game"; //shows "Not in-game" on the active DiscordRPC text
-		discordPresence.largeImageKey = "project64"; //Shows the Project64 logo on the large image box
-		discordPresence.largeImageText = "Project64-MPN"; //Name of the Project64 Logo
+		discordPresence.largeImageKey = "icon"; //Shows the Project64 logo on the large image box
+		discordPresence.largeImageText = "Project64 Netplay"; //Name of the Project64 Logo
 		discordPresence.smallImageKey = NULL; //Safety Measure to force unload the smallImageKey
 		discordPresence.smallImageText = NULL; //Safety Measure to force unload the smallImageText
 		discordPresence.endTimestamp = NULL; //Safety Measure to force unload the TimeStamp

@@ -42,7 +42,7 @@ md "%base_dir%\Bin\Package\Plugin%VSPlatform%\RSP"
 md "%base_dir%\Bin\Package\Plugin%VSPlatform%\Updater"
 md "%base_dir%\Bin\Package\Save"
 
-copy "%base_dir%\Bin\Release%VSPlatform%\Project64-MPN.exe" "%base_dir%\Bin\Package"
+copy "%base_dir%\Bin\Release%VSPlatform%\Project64-Netplay.exe" "%base_dir%\Bin\Package"
 
 copy "%base_dir%\Source\UserFiles\Config\*.*" "%base_dir%\Bin\Package\Config"
 copy "%base_dir%\Source\UserFiles\Config\Backup\*.*" "%base_dir%\Bin\Package\Config\Backup\"

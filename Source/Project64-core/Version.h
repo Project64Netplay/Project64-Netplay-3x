@@ -11,17 +11,17 @@
 #define STRINGIZE2(s) #s
 #define STRINGIZE(s) STRINGIZE2(s)
 
-#define VERSION_MAJOR               "MPN"
+#define VERSION_MAJOR               "Netplay"
 
 
-#define VER_FILE_DESCRIPTION_STR    "Project64 MPN"
+#define VER_FILE_DESCRIPTION_STR    "Project64 Netplay"
 #define VER_FILE_VERSION            VERSION_MAJOR, VERSION_MINOR, VERSION_REVISION, VERSION_BUILD
-#define VER_FILE_VERSION_STR        "MPN"
+#define VER_FILE_VERSION_STR        "Netplay"
 
 #define VER_COMPILE_TIME			__DATE__
 
 
-#define VER_PRODUCTNAME_STR         "Project64 MPN"
+#define VER_PRODUCTNAME_STR         "Project64 Netplay"
 #define VER_PRODUCT_VERSION         VER_FILE_VERSION
 #define VER_PRODUCT_VERSION_STR     VER_FILE_VERSION_STR
 #define VER_ORIGINAL_FIfLENAME_STR   VER_PRODUCTNAME_STR ".exe"

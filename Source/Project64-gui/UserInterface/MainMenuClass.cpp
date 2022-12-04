@@ -524,9 +524,9 @@ bool CMainMenu::ProcessMessage(HWND hWnd, DWORD /*FromAccelerator*/, DWORD MenuI
     case ID_HELP_STOCKHOMEPAGE: ShellExecute(NULL, "open", "https://www.pj64-emu.com/", NULL, NULL, SW_SHOWMAXIMIZED); break;
     case ID_HELP_ABOUT: m_Gui->AboutBox(); break;
     case ID_HELP_ABOUTSETTINGFILES: m_Gui->AboutIniBox(); break;
-	case ID_NETPLAY_MPN: ShellExecute(NULL, "open", "https://discord.com/invite/marioparty", NULL, NULL, SW_SHOWMAXIMIZED); break;
+	case ID_NETPLAY_MPN: ShellExecute(NULL, "open", "https://discord.gg/dcT7gkmeHe", NULL, NULL, SW_SHOWMAXIMIZED); break;
 	case ID_NETPLAY_UPDATE_EMULATOR: ShellExecute(NULL, "open", "Plugin\\Updater\\Updater.exe", NULL, NULL, SW_SHOWDEFAULT); break;
-    case ID_NETPLAY_REPLACESAVES: ShellExecute(NULL, "open", "Replace.bat", NULL, NULL, NULL); break;
+    case ID_NETPLAY_REPLACESAVES: ShellExecute(NULL, "open", "Replace.bat", NULL, NULL, SW_SHOWDEFAULT); break;
 
     default:
         if (MenuID >= ID_RECENT_ROM_START && MenuID < ID_RECENT_ROM_END)
